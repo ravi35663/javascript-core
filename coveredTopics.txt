@@ -1,0 +1,14 @@
+What is JavaScript?
+What are the data types in JavaScript?
+What is the difference between null and undefined?
+What are the different ways to declare variables in JavaScript?
+How do you check the type of a variable in JavaScript?
+What is the difference between == and === in JavaScript?
+Explain hoisting in JavaScript.
+What are closures in JavaScript?
+What is the prototype chain in JavaScript?
+What is the event loop in JavaScript?
+Explain the concept of callbacks in JavaScript.
+What are promises in JavaScript?
+What is async/await in JavaScript?
+How do you handle errors in JavaScript?

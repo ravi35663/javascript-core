@@ -1,0 +1,85 @@
+16. Explain the concept of debouncing and throttling in JavaScript.
+17. What is the difference between call() and apply() methods?
+18. How do you clone an object in JavaScript?
+19. Explain the concept of immutability in JavaScript.
+20. What are arrow functions in JavaScript?
+21. What is the spread operator in JavaScript?
+22. Explain the concept of rest parameters in JavaScript.
+23. How does the "this" keyword work in JavaScript?
+24. What are higher-order functions in JavaScript?
+25. Explain the concept of currying in JavaScript.
+26. What are the different ways to loop over an object in JavaScript?
+27. What is event delegation in JavaScript?
+28. Explain the concept of event bubbling and capturing.
+29. What is the Document Object Model (DOM) in JavaScript?
+30. How do you create and append elements dynamically in the DOM?
+31. What is AJAX in JavaScript?
+32. How do you make an AJAX call using XMLHttpRequest?
+33. What are the different ways to handle asynchronous code in JavaScript?
+34. Explain the concept of local storage and session storage.
+35. What are the different methods for manipulating arrays in JavaScript?
+36. Explain the concept of map(), filter(), and reduce() methods in JavaScript.
+37. How do you handle form validation in JavaScript?
+38. What are the different ways to include external JavaScript files?
+39. How do you handle cross-site scripting (XSS) attacks in JavaScript?
+40. Explain the concept of event-driven programming in JavaScript.
+41. What are the different types of errors in JavaScript?
+42. How do you debug JavaScript code?
+43. Explain the concept of memoization in JavaScript.
+44. What are generators in JavaScript?
+45. How do you handle concurrency in JavaScript?
+46. What is the difference between let, const, and var in JavaScript?
+47. Explain the concept of destructuring in JavaScript.
+48. What are symbols in JavaScript?
+49. How do you handle code splitting and lazy loading in JavaScript?
+50. Explain the concept of functional programming in JavaScript.
+51. What is the difference between map and weakMap in JavaScript?
+52. Explain the concept of requestAnimationFrame in JavaScript.
+53. How do you handle browser compatibility issues in JavaScript?
+54. What is the difference between cookies and local storage?
+55. Explain the concept of event-driven architecture in JavaScript.
+56. What are the different ways to handle asynchronous code in JavaScript?
+57. How do you handle memory leaks in JavaScript?
+58. Explain the concept of memoization in JavaScript.
+59. What are the different types of modules in JavaScript?
+60. How do you handle code optimization in JavaScript?
+61. Explain the concept of the DOMContentLoaded event.
+62. What is the difference between querySelector and getElementById?
+63. How do you handle date and time in JavaScript?
+64. Explain the concept of CORS (Cross-Origin Resource Sharing) in JavaScript.
+65. What are the different ways to manipulate strings in JavaScript?
+66. How do you handle file uploads in JavaScript?
+67. Explain the concept of web workers in JavaScript.
+68. What is the difference between synchronous and asynchronous code execution?
+69. How do you handle scroll events in JavaScript?
+70. Explain the concept of lazy evaluation in JavaScript.
+71. What are the different types of design patterns in JavaScript?
+72. How do you handle memory management in JavaScript?
+73. Explain the concept of memoization in JavaScript.
+74. What are the different methods for creating objects in JavaScript?
+75. How do you handle deep cloning of objects in JavaScript?
+76. Explain the concept of the fetch API in JavaScript.
+77. What are the different ways to handle form submissions in JavaScript?
+78. How do you handle internationalization in JavaScript?
+79. Explain the concept of event propagation in JavaScript.
+80. What is the difference between createElement and createDocumentFragment?
+81. How do you handle lazy loading of images in JavaScript?
+82. Explain the concept of lazy loading of modules in JavaScript.
+83. What is the difference between mutable and immutable data in JavaScript?
+84. How do you handle animation in JavaScript?
+85. Explain the concept of memoization in JavaScript.
+86. What are the different ways to handle routing in JavaScript?
+87. How do you handle responsive design in JavaScript?
+88. Explain the concept of accessibility in JavaScript.
+89. What is the difference between virtual DOM and real DOM?
+90. How do you handle code splitting and lazy loading in JavaScript?
+91. Explain the concept of higher-order components (HOC) in JavaScript.
+92. What are the different ways to handle error reporting and logging in JavaScript?
+93. How do you handle localization in JavaScript?
+94. Explain the concept of progressive web apps (PWAs) in JavaScript.
+95. What are the different ways to handle pagination in JavaScript?
+96. How do you handle form validation using regular expressions in JavaScript?
+97. Explain the concept of functional programming in JavaScript.
+98. What is the difference between optimistic and pessimistic UI updates?
+99. How do you handle code versioning and deployment in JavaScript?
+100. Explain the concept of continuous integration/continuous deployment (CI/CD) in JavaScript.
