@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SSE Example</title>
+</head>
+<body>
+  <div id="sse-data"></div>
+
+  <script>
+    const sseData = document.getElementById('sse-data');
+    // From where the event is coming(Source/server)
+    const eventSource = new EventSource('http://localhost:3000/sse');
+    eventSource.onmessage = (event)=>{
+        const data = JSON.parse(event.data);
+        sseData.innerText += data.message+'\n'
+    }
+  </script>
+</body>
+</html>

@@ -220,3 +220,85 @@ Final Thoughts"
  * 
  * 
 */
+
+//How do you check if a key exists in an object
+/*Way-1
+    if("key" in obj){
+        console.log("Key exists in object");
+    }
+*/
+
+/* Way-2
+    obj.hasOwnProperty("key"); // true
+    if(obj.hasOwnProperty("key")){
+        console.log("Key exists")
+    }
+*/
+
+/* Way-3
+    if(obj.key_name !==undefined){
+        console.log("Key exists in object");
+    }
+*/
+
+//How do you loop through or enumerate javascript object
+/*
+    You can use the for-in loop to loop through javascript object. You can also make 
+    sure that the key you get is an actual property of an object, and doesn't come 
+    from the prototype using hasOwnProperty method.
+    var object = {
+        k1: "value1",
+        k2: "value2",
+        k3: "value3",
+    };
+
+    for(var key in object){
+        if(object.hasOwnProperty(key)){
+            console.log(`${key} exists`);
+        }
+    }
+*/
+
+//How do you test for an empty object
+/*Way-1 (ES7)
+    let obj = {};
+    if(Object.entries(obj).length != 0){
+        console.log("Object is not empty");
+    }
+*/
+/*Way-2 (ES5)
+    let obj = {};
+    if(Object.keys(obj).length != 0){
+        console.log("Object is not empty");
+    }
+*/
+/*Way-3
+    function isObjectEmpty(obj){
+        for(let key in obj){
+            if(obj.hasOwnProperty(key)){
+                return false;
+            }
+        }
+        return true;
+    }
+*/
+
+//What is an arguments object
+/*
+    The arguments object is an Array-like object accessible inside functions that 
+    contains the values of the arguments passed to that function. 
+    For example, let's see how to use arguments object inside sum function,
+    function sum(){
+        let items = arguments
+        let total = 0;
+        * Note: You can't apply array methods on arguments object. But you can convert into a regular array as below.
+        * var argsArray = Array.prototype.slice.call(arguments); // this become a regular array
+        for(let i=0;i<items.length;i++){
+            total += items[i];
+        }
+        return total;
+    }
+    console.log(sum(10,20,30,40)); // 100 
+
+*/
+

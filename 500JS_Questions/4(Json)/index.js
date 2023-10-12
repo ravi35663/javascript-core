@@ -26,3 +26,17 @@ console.log(stringifyJson[0]) // '{'
 const parsedObj = JSON.parse(stringifyJson);
 console.log('parsedObj ',parsedObj) //{"name":"ravi","age":25} as object
 console.log(parsedObj.name) // ravi
+
+//What is JSON
+/*
+   JSON (JavaScript Object Notation) is a lightweight format that is used for data 
+   interchanging. It is based on a subset of JavaScript language in the way objects 
+   are built in JavaScript.
+*/
+
+//Why do you need JSON
+/*
+   When exchanging data between a browser and a server, the data can only be text. 
+   Since JSON is text only, it can easily be sent to and from a server, and used as 
+   a data format by any programming language.
+*/
