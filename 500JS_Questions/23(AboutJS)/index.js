@@ -347,4 +347,41 @@
     otherwise 'a' will get the value of 'b'.
 */
 
-//
+//Can we define properties for functions
+/*
+    Yes, We can define properties for functions because functions are also 
+    objects.
+    
+    fn = function (x) {
+        *Function code goes here
+    };
+    fn.name = "John";
+
+    fn.profile = function (y) {
+        *Profile code goes here
+    };
+*/
+
+//What is the way to find the number of parameters expected by a function
+/*
+    You can use 'function.length' syntax to find the number of parameters 
+    expected by a function. 
+    Let's take an example of sum function to calculate the sum of numbers,
+    i.e.
+    function sum(num1,num2,num3,num4){ // here num1,num2,num3 & num4 are called as arguments
+        return num1 + num2 + num3 + num4;
+    }
+    *sum.length // used to find expected parameters of the function sum.
+    sum(1,2,3,4) // here 1,2,3 & 4 are parameters of function sum.
+*/
+
+// More About javascript functions:
+/*
+    function person(name,age,address){
+        console.log("Name, age and address are ",name,age,address)
+    }
+    * person.prototype // function properties
+    * person.name // gives function name
+    * person.length // gives you number of parameters expected
+    * person.arguments // gives you array of arguments or null
+*/
