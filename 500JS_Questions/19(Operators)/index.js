@@ -86,3 +86,49 @@ let a = 10;
 let b = 20;
 console.log(eval("a+b")); // 30
 
+//What is a rest parameter
+/*
+    Rest parameter is an improved way to handle function parameters which allows us to represent an 
+    indefinite number of arguments as an array. The syntax would be as below,
+    
+    function f(a, b, ...theArgs) {
+        JS code would be here
+    }
+*/
+
+//For example, let's take a sum example to calculate on dynamic number of parameters,
+function sum(...args) {
+    let total = 0;
+    for (const i of args) {
+      total += i;
+    }
+    return total;
+}
+
+console.log(sum(1, 2)); //3
+console.log(sum(1, 2, 3)); //6
+console.log(sum(1, 2, 3, 4)); //13
+console.log(sum(1, 2, 3, 4, 5)); //15
+//Note: Rest parameter is added in ES2015 or ES6
+
+//What happens if you do not use rest parameter as a last argument
+/*
+    The rest parameter should be the last argument, as its job is to collect all the remaining arguments 
+    into an array. For example, if you define a function like below it doesn’t make any sense and 
+    will throw an error.
+    function someFunc(a,…b,c){
+        *You code goes here
+        return;
+    }
+*/
+
+//What is a spread operator
+/*
+    Spread operator allows iterables( arrays / objects / strings ) to be expanded into single 
+    arguments/elements. Let's take an example to see this behavior,
+*/
+function calculateSum(x, y, z) {
+    return x + y + z;
+}
+const numbers = [1, 2, 3];
+console.log(calculateSum(...numbers)); // 6
