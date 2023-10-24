@@ -302,3 +302,34 @@ Final Thoughts"
 
 */
 
+//How do you get the prototype of an object
+/*
+    You can use the Object.getPrototypeOf(obj) method to return the prototype of the specified object. 
+    i.e. The value of the internal prototype property. If there are no inherited properties then null value 
+    is returned.
+*/
+
+const newPrototype = {};
+const newObject = Object.create(newPrototype);
+console.log(Object.getPrototypeOf(newObject) === newPrototype); // true
+
+//What happens If I pass string type for getPrototype method
+/*
+    In ES5, it will throw a TypeError exception if the obj parameter isn't an object. Whereas in ES2015, 
+    the parameter will be coerced to an Object.
+
+    // ES5
+    Object.getPrototypeOf("James"); // TypeError: "James" is not an object
+    // ES2015
+    Object.getPrototypeOf("James"); // String.prototype
+*/
+
+//How do you set prototype of one object to another
+/*
+    You can use the Object.setPrototypeOf() method that sets the prototype 
+    (i.e., the internal Prototype property) of a specified object to another object or null. 
+    For example, if you want to set prototype of a square object to rectangle object would be as follows,
+    
+    Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
+    Object.setPrototypeOf({}, null);
+*/

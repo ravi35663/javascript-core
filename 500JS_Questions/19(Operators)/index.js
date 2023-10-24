@@ -82,8 +82,8 @@ console.log(typeof user); //object
     can be a JavaScript expression, variable, statement, or sequence of statements.
 */
 console.log(eval("1 + 2")); //  3
-let a = 10;
-let b = 20;
+var a = 10;
+var b = 20;
 console.log(eval("a+b")); // 30
 
 //What is a rest parameter
@@ -132,3 +132,48 @@ function calculateSum(x, y, z) {
 }
 const numbers = [1, 2, 3];
 console.log(calculateSum(...numbers)); // 6
+
+//What is an Unary operator
+/*
+    The unary(+) operator is used to convert a variable to a number.If the variable cannot be converted, 
+    it will still become a number but with the value NaN. 
+    Let's see this behavior in an action.
+*/
+
+var x = "100";
+var y = +x;
+console.log(typeof x, typeof y); // string, number
+
+var x = "100";
+var y = +x;
+
+var a = "Hello";
+var b = +a;
+console.log(typeof a, typeof b, b); // string, number, NaN
+
+//What is a comma operator
+/*
+    The comma operator is used to evaluate each of its operands from left to right and returns the value of 
+    the last operand. This is totally different from comma usage within arrays, objects, and function 
+    arguments and parameters. 
+    For example, the usage for numeric expressions would be as below,
+*/
+var x = 1;
+x = (x++, x);
+console.log(x); // 2
+x = (x++, x+2);
+console.log(x)// 5
+
+//What is the advantage of a comma operator
+/*
+    It is normally used to include multiple expressions in a location that requires a single expression. 
+    One of the common usages of this comma operator is to supply multiple parameters in a for loop. 
+    For example, the below for loop uses multiple expressions in a single location using comma operator,
+*/
+for (var a = 0, b =10; a <= 10; a++, b--);
+
+//You can also use the comma operator in a return statement where it processes before returning.
+function incrementValue(value){
+    return (value +=10),value;
+}
+console.log(incrementValue(10)); // 20

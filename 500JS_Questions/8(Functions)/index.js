@@ -110,3 +110,93 @@
    ES6: giving preference to const over let usage.
 */
 
+//How do you sort elements in an array
+/*
+    The sort() method is used to sort the elements of an array in place and returns the sorted array. 
+    The example usage would be as below,
+*/
+var months = ["Aug", "Sep", "Jan", "June"];
+months.sort();
+console.log(months); //  ["Aug", "Jan", "June", "Sep"]
+
+//What is the purpose of compareFunction while sorting arrays
+/*
+    The compareFunction is used to define the sort order. If omitted(left), the array elements are converted 
+    to strings, then sorted according to each character's Unicode code point value. 
+    Let's take an example to see the usage of compareFunction,
+*/
+
+let numbers = [1, 2, 5, 3, 4];
+numbers.sort((a, b) => b - a);
+console.log(numbers); // [5, 4, 3, 2, 1]
+numbers.sort((a, b) => a - b); 
+console.log(numbers) // [1,2,3,4,5]
+
+// To reverse an array:
+numbers.reverse(); //[5, 4, 3, 2, 1]
+
+//How do you find min and max value in an array
+/*
+    You can use Math.min and Math.max methods on array variables to find the minimum and maximum elements 
+    within an array. 
+    Let's create two functions to find the min and max value with in an array,
+*/
+var marks = [50, 20, 70, 60, 45, 30,70];
+function findMax(arr){
+    // here null for no context
+    return Math.max.apply(null,arr);
+}
+
+function findMin(arr){
+    return Math.min.apply(null,arr);
+}
+
+console.log("Max number is :",findMax(marks));
+console.log("Min number is :",findMin(marks));
+
+//How do you find min and max values without Math functions
+function findMaxElement(arr){
+    let max = -Infinity;
+    let index = 0;
+    while(arr[index]!=undefined){
+        if(arr[index] > max){
+            max = arr[index];
+        }
+        index++;
+    }
+    return max;
+}
+
+function findMinElement(arr){
+    let min = Infinity;
+    let index = 0;
+    while(arr[index]!=undefined){
+        if(arr[index] < min){
+            min = arr[index];
+        }
+        index++;
+    }
+    return min;
+}
+//What is an empty statement and purpose of it
+/*
+    The empty statement is a semicolon (;) indicating that no statement will be executed, even if JavaScript 
+    syntax requires one. Since there is no action with an empty statement you might think that it's usage 
+    is quite less, but the empty statement is occasionally useful when you want to create a loop that has 
+    an empty body. 
+    For example, you can initialize an array with zero values as below,
+*/
+let a = [];
+// Initialize an array a
+for(let i=0;i<10;a[i++]=0);
+console.log(a);
+
+//How do you get metadata of a module
+/*
+    You can use the import.meta object which is a meta-property exposing context-specific meta data to a 
+    JavaScript module. It contains information about the current module, such as the module's URL. 
+    In browsers, you might get different meta data than NodeJS.
+
+    <script type="module" src="welcome-module.js"></script>;
+    console.log(import.meta); // { url: "file:///home/user/welcome-module.js" }
+*/
