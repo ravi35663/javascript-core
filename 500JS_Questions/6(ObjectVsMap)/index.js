@@ -333,3 +333,65 @@ console.log(Object.getPrototypeOf(newObject) === newPrototype); // true
     Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
     Object.setPrototypeOf({}, null);
 */
+
+//How do you check whether an object can be extendable or not
+/*
+    The 'Object.isExtensible()' method is used to determine if an object is extendable or not. i.e, 
+    Whether it can have new properties added to it or not.
+    *Note: By default, all the objects are extendable. i.e, The new properties can be added or modified.
+*/
+
+const personObj = {name:"Ravi"}
+console.log("Is personObj is extensible",Object.isExtensible(personObj));// true
+Object.preventExtensions(personObj);
+personObj['age'] = 25 // can not be added to the object
+console.log("Is personObj is extensible",Object.isExtensible(personObj));// false
+
+//What are the different ways to make an object non-extensible
+/*
+    You can mark an object non-extensible in 3 ways,
+
+    1) Object.preventExtensions
+    2) Object.seal
+    3) Object.freeze
+*/
+
+var newObj = {};
+
+Object.preventExtensions(newObj); // Prevent objects are non-extensible
+Object.isExtensible(newObj); // false
+
+var sealedObject = Object.seal({}); // Sealed objects are non-extensible
+Object.isExtensible(sealedObject); // false
+
+var frozenObject = Object.freeze({}); // Frozen objects are non-extensible
+Object.isExtensible(frozenObject); // false
+
+//How do you define multiple properties on an object
+/*
+    The Object.defineProperties() method is used to define new or modify existing properties directly 
+    on an object and returning the object. 
+    Let's define multiple properties on an empty object,
+*/
+
+const newObject2 = {};
+
+Object.defineProperties(newObject2, {
+  newProperty1: {
+    value: "John",
+    writable: true,
+  },
+  newProperty2: {},
+});
+
+
+//What is an object initializer
+/*
+    An object initializer is an expression that describes the initialization of an Object. The syntax for 
+    this expression is represented as a comma-delimited list of zero or more pairs of property names and 
+    associated values of an object, enclosed in curly braces ({}). 
+    This is also known as literal notation. It is one of the ways to create an object.
+*/
+
+var initObject = { a: "John", b: 50, c: {} };
+console.log(initObject.a); // John
