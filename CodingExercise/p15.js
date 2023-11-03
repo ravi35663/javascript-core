@@ -48,3 +48,31 @@ var set = new Set();
 set.add("+0").add("-0").add(NaN).add(undefined).add(NaN);
 console.log(set);
 //Set(4) { '+0', '-0', NaN, undefined }
+
+console.log("Symbols");
+const sym1 = Symbol("one");
+const sym2 = Symbol('one');
+
+const sym3 = Symbol.for('two');
+const sym4 = Symbol.for('two');
+console.log(sym1 === sym2, sym3 === sym4);// false, true
+
+/*
+
+    *Symbol follows below conventions,
+    1) Every symbol value returned from Symbol() is unique irrespective of the optional string.
+    2) Symbol.for() function creates a symbol in a global symbol registry list. 
+       But it doesn't necessarily create a new symbol on every call, it checks first if a symbol 
+       with the given key is already present in the registry and returns the symbol if it is found. 
+       Otherwise a new symbol created in the registry.
+    
+    *Note: The symbol description is just useful for debugging purposes.
+*/
+
+const sym = new Symbol("one");
+console.log(sym);
+/*
+
+Symbol is a just a standard function and not an object constructor(unlike other primitives new Boolean, new String and new Number). So if you try to call it with the new operator will result in a TypeError
+
+*/
