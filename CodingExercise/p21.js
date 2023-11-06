@@ -67,7 +67,7 @@ console.log(message);
 var expressionOne = function functionOne() {
     console.log("functionOne");
 };
-functionOne();
+// functionOne();
 //ReferenceError: functionOne is not defined
 /*
     The function call functionOne is not going to be part of scope chain and it has it's own 
@@ -76,7 +76,7 @@ functionOne();
     Hence, there will be an error while invoking the function as functionOne is not defined.
 */
 
-
+console.log("Eat fruit example");
 const user = {
     name: "John",
     eat() {
@@ -88,3 +88,61 @@ const user = {
     },
 };
 user.eat();
+
+/*
+  Output:
+   {name: "John", eat: f}, Window {...}
+*/
+/*
+  'this' keyword is dynamic scoped but not lexically scoped . In other words, it doesn't matter 
+  where this has been written but how it has been invoked really matter. 
+  In the above code snippet, the user object invokes eat function so this keyword refers to user 
+  object but eatFruit has been invoked by eat function and this will have default Window object.
+  
+  *The above pit fall fixed by three ways,
+
+  In ES6, the arrow function will make this keyword as lexically scoped. 
+  Since the surrounding object of this object is user object, the eatFruit function will contain 
+  user object for this object.
+  const user = {
+    name: "John",
+    eat() {
+      console.log(this);
+      var eatFruit = () => {
+        console.log(this);
+      };
+      eatFruit();
+    },
+  };
+  user.eat();
+
+  The next two solutions have been used before ES6 introduced.
+  It is possible create a reference of this into a separate variable and use that new variable 
+  in place of this keyword inside eatFruit function. 
+  This is a common practice in jQuery and AngularJS before ES6 introduced.
+  const user = {
+    name: "John",
+    eat() {
+      console.log(this);
+      var self = this;
+      var eatFruit = () => {
+        console.log(self);
+      };
+      eatFruit();
+    },
+  };
+  user.eat();
+
+  The eatFruit function can bind explicitly with this keyword where it refers Window object.
+  const user = {
+    name: "John",
+    eat() {
+      console.log(this);
+      var eatFruit = function () {
+        console.log(this);
+      };
+      return eatFruit.bind(this);
+    },
+  };
+  user.eat()();
+*/
