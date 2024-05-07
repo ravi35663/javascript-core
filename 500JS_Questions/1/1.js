@@ -1,5 +1,14 @@
 // What are the possible ways to create objects in JavaScript
 
+/*
+--> A better option for creating object maps is to use the 'Object.create(null)' 
+   utility.
+    const mapObject = Object.create(null);
+    console.log(mapObject['toString']); //undefined
+    * Object.create(null) builds an object with no prototype.
+    * {} an empty object with object prototype.
+*/
+
 // 1) Object constructor
 var obj = new Object();
 var obj = Object(); // this and above code is return the same result.
@@ -29,6 +38,8 @@ var obj = {
 function Person(name,age){
     this.name = name;
     this.age = age;
+    // this dummy won't be accessible through personObj
+    dummy = "dummy"
 }
 var peronObj = new Person('Amit',25);
 console.log("Object is ",peronObj);
@@ -76,7 +87,7 @@ console.log('Obj ',obj);
 
 /***
 * Why do we use 'new' keyword?
-* 'new' is used to create instances of objects fro constructor functions 
+* 'new' is used to create instances of objects from constructor functions 
 *  and classes
 */
 

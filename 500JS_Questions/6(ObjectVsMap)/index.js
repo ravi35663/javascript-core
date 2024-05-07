@@ -289,7 +289,8 @@ Final Thoughts"
     contains the values of the arguments passed to that function. 
     For example, let's see how to use arguments object inside sum function,
     function sum(){
-        let items = arguments
+        let items = arguments;
+        const arr = Object.values(arguments); // also a way because arguments is an object
         let total = 0;
         * Note: You can't apply array methods on arguments object. But you can convert into a regular array as below.
         * var argsArray = Array.prototype.slice.call(arguments); // this become a regular array
@@ -319,6 +320,7 @@ console.log(Object.getPrototypeOf(newObject) === newPrototype); // true
     the parameter will be coerced to an Object.
 
     // ES5
+
     Object.getPrototypeOf("James"); // TypeError: "James" is not an object
     // ES2015
     Object.getPrototypeOf("James"); // String.prototype

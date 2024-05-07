@@ -12,7 +12,7 @@
 
 /**
  * Q:What is a first class function?
- * A: In javascript functions are first class objects.First class functions means
+ * A: In javascript functions are first class objects. First class functions means
  *    when functions in that language are treated like any other variable.
  *    
  * In such a language, a function can be passed as an argument to other functions, 
@@ -80,6 +80,8 @@
      i.e, If you call a function with the same arguments 'n' number of times and 
      'n' number of places in the application then it will always return the same 
      value.
+     i.e. if we do not use any other's outsides variable/functions inside the function.that is known as 
+     pure function
      
     * Impure
     let numberArray = [];

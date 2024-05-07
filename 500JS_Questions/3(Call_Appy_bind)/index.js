@@ -2,6 +2,7 @@
 
 /* Call: The call() method invokes a function with a given this value and 
    arguments provided one by one
+   -> call, calls a function with its given context.
 */
 var emp1 = {firstName:"John", lastName:"Rodson"};
 var emp2 = {firstName:"Jimmy", lastName:"Baily"}

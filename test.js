@@ -1,17 +1,5 @@
-
-console.log("This value is",this);
-const person = ()=>{
-    this.name = "ravi"
-    this.age = 25;
-    console.log("Person is called",this);
-    const getInfo = ()=>{
-        console.log("get info is called",this);
-        const againGetInfo = ()=>{
-            console.log("Agian get info is called",this);
-        }
-        againGetInfo();
-    }
-    getInfo();
-}
-person();
-console.log("this object in outer function",this);
+const obj1 = {name:"Ravi",age:25,gender:"Male"};
+const obj2 = {name:"Amit"};
+obj2.__proto__ =obj1
+console.log("Actual Obj2 is :",obj2);
+console.log("Obj2 with proto is : ",obj2.name);

@@ -101,7 +101,7 @@
       -> Accessed only on client side.
       -> life (until deleted)
       -> SSL not supported
-      -> Maximum data size is 5MB
+      -> Maximum data size is 10MB
    
    Session Storage:
       -> Accessed only on client side.
