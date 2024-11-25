@@ -1,24 +1,8 @@
-// try {
-//     try {
-//       throw new Error("Something went wrong");
-//     } catch (error) {
-//       console.log("Caught an error:", error.message);
-//     } finally {
-//       console.log("Finally block executed");
-//     } 
-//     console.log("Hello World");
-// } catch (error) {
-//     console.log("Error in line 10",error);
-// }
+var a = 10;
+{
+    console.log("Value of a ",a)
+    var a = 100; // here a is not new variable it is the reference of previous a
+    var b =500
+}
 
-// try {
-//   var name = "Telus"
-//   throw new Error("Something went wrong"); 
-// } catch (error) {
-//   console.log("In catch-block",name);
-//   console.log("Caught an error:", error.message);
-// } finally {
-//   console.log("Finally block executed",name);
-// }
-
-
+console.log("Value of a and b ",a,b);
