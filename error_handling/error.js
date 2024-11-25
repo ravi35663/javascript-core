@@ -59,3 +59,19 @@ document.querySelector('#button').addEventListener('click',()=>{
         console.log('Error is',error.message);
     }
 })
+
+/*
+    Custom Error: Error
+*/
+class ValidationError extends Error {
+    constructor(message) {
+      super(message);
+      this.name = "ValidationError";
+    }
+}
+  
+try {
+    throw new ValidationError("Invalid data provided");
+} catch (error) {
+    console.log(error.name + ": " + error.message);
+}
