@@ -1,0 +1,182 @@
+/*
+==> Javascript Data types:
+    -> Number : - Any positive , negative or rational number . 
+    -> Boolean : - (true or false)
+    -> String : - Any string (e.g. "john doe")
+    -> null 
+    -> undefined
+*/
+
+/*
+==> Javascript variable declaration:
+    ->  var: it is a global level variable. (e.g. life of the variable isn throughout of the program).
+        var name = "Ravi"
+    ->  let: it is a scope/block level variable (e.g. memory deleted once the scope of the variable is ended).
+        let name = "Ravi"
+    ->  const: it is a scope/block level variable once it is assigned cannot be changed.
+        const name = "Ravi"
+*/
+
+/*
+==> Array :
+    ->  An array is a collection of similar or dissimilar kind of elements (heterogeneous elements).
+        arr = [1,2,3,"Sumit", 1.23, {name:"Ravi"}]
+    ->  const arr = new Array(4) // it will create 4 empty blocks which will have undefined value stored.
+        arr.length ---> 4
+    ->  To Check array type:
+        arr = [1,"",1.9];
+        arr.constructor === Array --> true
+
+        Array.isArray(arr)  --> true
+        Array.isArray(12)   --> false
+    ->  ("kks").constructor === Array ->  false
+    -> arr.length => it is variable not a function
+*/
+
+/*
+==> Javascript Object :
+    ->  An object is the key-value pair of the elements which is used to store some values in key - value format. 
+        e.g.
+        let person = {
+            name:"sumit kumar",
+            age: 25,
+            mobile_number: 989124882,
+            occupation:"Software engineer"
+        }
+*/
+
+/*
+==> Operators:
+    1) Arithmetic operators:
+        ->  + | - | * | / | % (Modulus operator) | ++ (Increment operator) | -- (decrement operator)
+    2) JS Comparison / Relational Operators: 
+        -> == | === (Check both type and value) | !== |  > | >= | < | <= 
+    3) Logical Operators:
+        -> && (Logical AND) | || (Logical OR) | ! (Logical NOT)
+
+    4) JS Conditional Statements :-
+        —> if (some condition){
+                // Some codes	
+            }
+        —> if (some conditions){
+                // Some codes
+            }else {
+                //Some code that will run when if conditions are getting failed
+            }
+        —> if (condition-1){
+                // Some code
+            }else if (condition-2){
+                // Some code 
+            }else if (condition-n){
+                // Some code
+            }else {
+                // This else block is optional in case of else if ladder 
+            }
+        -> ternary operator : - (condition1 ? if-statement : else-statement)
+        —> Switch case : -
+            switch (expression){
+                case x:
+                    //some code;
+                    // To avoid any break use, you can return something instead , if switch-case is
+                    // used within a function 
+                    break;
+                case y: 
+                    //Some code
+                    break;
+                default : 
+                    //some code 
+            }
+
+    5) Iterations (Loops) : - 
+        —> for(let i = 0 ; i < 10 ; i++){
+                //Some code which will repeat 10 times (in this case)
+            }
+
+        —> while(condition){
+                // Some codes
+            }
+
+            —> do{
+                // Do-while loops run at least one time
+            } while(some conditions);
+    6) Bitwise Operator : -
+        -> Bitwise operator works on 32 bits numbers
+        -> Bitwise operator compares elements on each binary bit . 
+        ->  & => (1 & 1 -> 1 , 1 & 0 -> 0 , 0 & 0 -> 0)
+        ->  | => ( 1 | 1 -> 1 , 0 | 1 -> 1 , 0 | 0 -> 0 , 3 | 2 -> 3)
+        ->  ^ => ( same bit return zero while different bit returns 1 (only 0 and 1) )
+        ->  ~ => (Not ~n = -(n+1))
+        -> << =>  (Add zeros in the right side and discard elements in left side e.g. 5 << 1 ; 
+            ->   0101 << 1 ; -> 1010   ) 
+        ->  >> (Discard the elements from left side 5 >> 1 ; -> 0101 >>  1 ; -> 0010 ) 
+            (This is signed shift operator ) 
+        -> >> (Signed shift operator e.g. -8 >> 2 = -2) 
+        -> >>> (Unsigned shift operator -8 >>> 2 = 1073741822)
+        -> >>> (fill zeros on the right side and remove the leftmost bits  by discarding left most elements .
+            e.g. 5>>>1 -> 0101>>>1 = 0010)
+*/
+
+/*
+==> Notes : -
+    ->  You can check primitive data types with 'typeof' but you cannot check object types with typeof.
+    ->  'typeof' only returns number,string,null,boolean,undefined, object and functions.
+    ->  To check any data types you can use: variable.constructor === Data_type
+    -> e.g. ([1]).constructor === Array     -> true
+            ("name").constructor === Array  -> false
+            ("name").constructor === String -> true
+            (10).constructor === Number     -> true
+    -> In Javascript, function is like a variable that takes the place in the memory .
+    —> Number, String and boolean are primitive data types in JS
+    —> null and undefined are trivial(less to primitive,less important) data types.
+    —> Objects and array are composite data types
+    —> In JS switch-case you can take string, boolean and integer or you can use primary DT.
+    —> To delete any value from an object use the below method .
+        car = {name:"tata tigor", "price": 123, model: "s3"}
+        delete car.name ===> It will delete the "name" key and value from the car object
+    —> Everything in Javascript is an object . Boolean, Number, String, Dates, Maths, RE are always an object.
+    -> function vs method: if you write any function inside any Class or object it is called method otherwise it is called function.
+    ->  To find datatype of the variable use "typeof()".
+            let name = "sumit";    --> typeof(name) --> str
+*/
+
+/*
+==> Mutation : - 
+    ->  Mutation means manipulating data type (or values) with its original values.
+    —>  Immutable values means once created cannot be changed .(Primitive data type )
+    —>  let person = {
+            name:”sumit”,
+            age:25
+        }
+	    Person.age = 30;
+    -> string is immutable in javascript
+    -> *Primitive data types are immutables.
+Note : - Here we can change the value of the object hence it is mutable .
+*/
+
+/*
+==> Deep Cloning : -
+    ->  If we create an object (any object like array or composite data type) and assign each attribute of 
+        the previous object to a newly created object then changes made in any of the objects won’t affect 
+        any other object . That is known as deep cloning .
+        e.g. 
+        let  original ={
+            name:”sumit”,
+            age:25
+        }
+    -> let duplicate = original  (// Shallow copying)
+        Here both “original” and “duplicate” objects have the same address and it is known as shallow  copying.
+        And in this case if we make any changes to any of the objects either 'original' or 'duplicate', it 
+        affects other objects ('original' or 'duplicate') as well .
+
+    -> Deep cloning or copying  
+        # Method-1
+        let duplicate = {...original} (//this is known as deep cloning or deep copying this is the first level of deep cloning).
+        
+        #Method - 2:
+        let duplicate_1 = Object.assign({},original) // this is also deep cloning this is also the first 
+        level of deep cloning.
+    
+        #Method - 3:
+        let duplicate_2 = JSON.parse(JSON(stringify(original))); // this is perfect deep cloning.
+        Here if we change a duplicate object’s attributes it won’t affect the original object.
+*/
