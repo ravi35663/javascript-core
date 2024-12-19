@@ -113,7 +113,7 @@
  *What is Hoisting
  -> Hoisting is a JavaScript mechanism where variables, function declarations and 
     classes are moved to the top of their scope before code execution. 
-    Remember that JavaScript only hoists declarations, not initialisation. 
+    Remember that JavaScript only hoists declarations, not initialization. 
     Let's take a simple example of variable hoisting
     
     *Example:1
@@ -127,4 +127,60 @@
     }
 
     This hoisting makes functions to be safely used in code before they are declared.
+*/
+
+/*
+===> Hoisting in javascript : -
+    ->  undefined   ->    when value does not assigned 
+    ->  not defined ->   it is fetal error 
+    ->  Before initializing any variable or function, we call them that is known as hoisting in JS.
+        Example : 
+            console.log(“Get name”,getName()); //show: My name is sumit
+            function getName(){
+                console.log(“My name is sumit”);
+            }
+
+        console.log(getName); // show: function definition
+        console.log(getName()); // show: My name is sumit
+        console.log(x) // x not defined (because we have not reserved any memory for x)
+
+    ->  Before starting execution of any program, memory assigned to each variable and function as 
+        we saw in the execution context (Memory creation phase).
+    ->  "not defined" only happens when we have not defined memory for any variable and are  trying to 
+        access it .
+
+    Example 2:
+        console.log("Get name",getName()); // error getName is not a function . As initial phase it 
+        // is treated as variable but after function execution it has function definition 
+        getName = ()=>{ // this is known as function expression.
+            console.log(“My name is sumit”);
+        }
+*/
+
+/*
+===> Let and const and temporal dead zone :-
+    ->  let and const declarations are hoisted (assigning variables, function, class)
+    ->  let and const are in a temporal dead zone for the time being .
+    ->	console.log(a); // Error : Cannot access before initialization 
+        let a = 10;
+        var b = 100;
+
+    ->	console.log(b); // undefined (because at the beginning only memory assigned to variable b)
+        var b = 100;
+
+    ->  when we use let and const variables in global scope then it has assigned memory in other places in global scope .
+    ->  Hoisting means assigning undefined (assign place to identifiers) by JS-Engine.
+*/
+
+/*
+==> Temporal dead zone (TDZ) :- 
+    ->  Temporal dead zone is a time between any variable is hoisted and any value is initialized to 
+        that variable.
+    ->  Time between assigning variables to undefined values.
+    ->  Whenever you try to get a variable which is in the temporal dead zone, it gives you an error 
+        (reference error, fetal error).
+    ->  We cannot redeclare the same variable name with let and const in the same scope but we can 
+        declare it with var.
+    ->  Must assign value to const while declaring const variable.
+    -> * let and const always are in the temporal dead zone.
 */

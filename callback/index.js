@@ -52,3 +52,14 @@ x(function y(){
     -> If there is any error occurring in one function then that function will affect the other callbacks. 
     -> Callback hell also known as (AKA) pyramid of doom.
 */
+
+/*
+==> Callback : -
+    ->  Because of callbacks , we do asynchronous things in JS.
+    ->  Whatever cb executed in the program , it executed in the main-thread.
+    ->  Blocking the main thread means some line of the code takes too much time to execute at that 
+        period of time it blocks the main thread because everything in Javascript runs in main until 
+        we separate the threads.
+    ->  Event listeners are very heavy. i.e it took memory hence we remove them once the job of the 
+        event listener is completed.
+*/

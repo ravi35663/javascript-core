@@ -30,5 +30,5 @@ null == undefined // true
 null === undefined // false
 '0' == false // true
 '0' === false // false
-[]==[] or []===[] //false, refer different objects in memory
-{}=={} or {}==={} //false, refer different objects in memory
+// []==[] or []===[] //false, refer different objects in memory
+// {}=={} or {}==={} //false, refer different objects in memory
