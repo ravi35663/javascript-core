@@ -92,3 +92,8 @@ newObj.x()
 // you use this inside any element then this will represents that element itself(reference of the html element).
 
 // this keyword behaves differently in classes in javascript
+
+/*
+
+
+*/
