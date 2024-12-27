@@ -133,3 +133,30 @@ Note:
     -> Procedural Programming
     -> Prototypal programming
 */
+
+/*
+===> “Use Strict” (Strict mode): 
+    ->  ‘use strict’ -> define that the JS code will be executed in strict mode .
+    ->  With ‘use strict’ you cannot use undefined variables in the scripts.
+    ->  Examples : 
+            a = 10;
+            console.log(“A”,a); // It gives you an error.
+    ->  We can use ‘use strict’ in any function , class or any block
+    ->  We use ‘use strict’ mode to write secure JS code
+    ->  To improve code quality (less error and warnings)
+    ->  Deleting a variable in not allowed in ‘strict mode’
+        e.g. ‘strict mode’ 
+            let x = 10;
+            delete x; --> Cause a error
+    ->  Deleting a function is not allowed 
+    ->  Duplicating a parameter is not allowed.
+*/
+
+/*
+===> Advantages of JS:
+    ->  Regardless of where you host javascript code on the client side , it always executes on the 
+        client side and reduces a lot of bandwidth and makes execution very fast .
+    ->  Javascript is cross-platform language 
+    ->  Javascript is dynamic or  weak typed language 
+    ->  Both frontend and backend can be designed in JS
+*/

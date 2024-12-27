@@ -136,3 +136,10 @@ x();
     -> Over memory consumption.
     -> if closure does not deal properly then it causes memory leak issues.
 */
+
+/*
+    ->  A closure is the combination of a function bundled together (enclosed) with reference to its 
+        surroundings state (lexical environment ).
+    ->  A closure gives you access to an outer function’s scope inner function.
+    ->  Variables created without a declaration (var, let, const) are always in the global scope even they created inside any function
+*/
