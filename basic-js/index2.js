@@ -160,3 +160,49 @@ Note:
     ->  Javascript is dynamic or  weak typed language 
     ->  Both frontend and backend can be designed in JS
 */
+
+
+/*
+==> require:
+    ->  require is used in node.js and follows the commonJs module system. 
+    ->  require is used to import modules.
+    ->  require is synchronous. It blocks lines of code for execution.
+    ->	e.g.
+            const fs = require(“fs”);
+            const myModule = require(“./myModule”);
+*/
+
+/*
+==> import:
+    -> import is used in the modern javascript environment (ECMAScript).
+    -> import supported by browser and also used in some nodeJs versions.
+    -> import is also used for importing modules in javascript.
+    -> import is asynchronous. E.g it won’t block any line of code.
+    ->	e.g.
+            import file from “myfile”
+            import fs from ‘fs’
+*/
+
+/*
+==> null Vs undefined: -
+    -> "null" represents the intentional absence of any object value. While,  
+    -> "undefined" represents a variable that has been declared but has not been assigned a value.
+
+==> '==' Vs '===' : -
+    ->  The '==' operator performs type coercion, which means it converts operands to a common type and 
+        then checks the equality.
+    ->  In the other hand '===' operator does not perform type coercion and it check exact type 
+        (strictly)
+*/
+
+
+/*
+===> Predefined JS functions:-
+    -> parseInt(string,radix/base) :- parseInt always returns an integer value of string or NaN.
+        const decimal = parseInt(“10”) -> 10
+        const decimal2 = parseInt(“10”,10) -> explicitly parse as 10
+        const binary = parseInt(“1010”,2) -> 10, parse as Binary (2)
+        const hex = parseInt(“1A”,16) -> parse on base 16 value would be 26.
+
+
+*/

@@ -92,3 +92,47 @@ if (typeof window.localStorage == 'undefined' || typeof window.sessionStorage ==
     if (typeof window.localStorage == 'undefined') window.localStorage = new Storage('local');
     if (typeof window.sessionStorage == 'undefined') window.sessionStorage = new Storage('session');
     })();
+
+/*
+  ==> Polyfills:    
+  ->  It is a JS feature that provides a way to support the feature of new browsers to the older 
+      browsers.
+*/
+
+const arr = [..."123456789"]
+console.log(arr);
+// Polyfills for map function (Custom map function)
+//  prototype used to add properties in datatypes
+Array.prototype.myMap = function(callback){
+   // Here this refers to arr
+   const new_arr = [];
+   for(let i=0;i<this.length;i++){
+       new_arr.push(callback(this[i]));
+   }
+   return new_arr;
+}
+
+
+// Polyfills for filter function
+// (Custom filter function)
+Array.prototype.myFilter = function(callback){
+   const updatedArr = [];
+   for(let i=0;i<this.length;i++){
+       if(callback(this[i])){
+           updatedArr.push(this[i]);
+       }
+   }
+   return updatedArr;
+}
+
+
+const myMapResult = arr.myMap((item)=>{
+   return Number(item);
+})
+
+
+const myFilterResult = myMapResult.myFilter((item)=>{
+   return item % 2 === 0;
+})
+console.log("My mapped result is ",myMapResult);
+console.log("My filtered result ",myFilterResult);
