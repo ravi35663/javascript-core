@@ -75,3 +75,6 @@ try {
 } catch (error) {
     console.log(error.name + ": " + error.message);
 }
+
+// Creating Errors:
+const err = new Error("Some message:");

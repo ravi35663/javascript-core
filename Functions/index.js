@@ -297,3 +297,58 @@ counter_1.displayCounter();
         return a function
     -> Examples : map, filter, forEach, sort, setTimeout , ...etc
 */
+
+
+/*
+    Normal Function Vs Arrow Functions:
+    ==> Normal Function: 
+        ->  const add = function (x,y){return x+y} // One-liner code:
+        ->  Argument Binding: 
+                function reg(x,y){
+                    console.log(arguments)
+                }
+                reg(10,20)
+                output : [10,20]
+        ->  Regular functions are constructible
+                function fun(){
+                    console.log("Regular function")
+                }    
+                const f = new FunctionName();
+        ->  Normal functions have duplicate parameters but not in strict-mode.
+        ->  Normal function has their own 'this'.
+
+    ==> Arrow function:
+        ->  Arrow function is also know as 'fat' function.
+        ->  const add = ()=>{return x+y}  // one-liner-code:
+        ->  Arrow function do not have argument binding
+        ->  Arrow function has not their own 'this', 'this' inside an arrow function refer to its outer 
+            'this'
+        ->  Arrow function cannot be use as constructor function.Because you cannot use 'new' with arrow functions.
+        ->  Arrow functions never have duplicate parameters neither in strict-mode nor-in general mode.
+*/
+
+console.log("This value is",this);
+const person = ()=>{
+   this.name = "sumit"
+   this.age = 25;
+   console.log("Person is called",this);
+   const getInfo = ()=>{
+       console.log("get info is called",this);
+       const againGetInfo = ()=>{
+           console.log("Again get info is called",this);
+       }
+       againGetInfo();
+   }
+   getInfo();
+}
+person();
+console.log("this object in outer function",this);
+
+/*
+==> output : -
+    -> This value is {}
+    -> Person is called { name: 'sumit', age: 25 }
+    -> get info is called { name: 'sumit', age: 25 }
+    -> Again get info is called { name: 'sumit', age: 25 }
+    -> this object in outer function { name: 'sumit', age: 25 }
+*/
