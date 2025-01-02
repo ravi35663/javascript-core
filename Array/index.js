@@ -3,7 +3,7 @@
     ->  An array is a collection of similar or dissimilar kind of elements (heterogeneous elements).
         arr = [1,2,3,"Sumit", 1.23, {name:"Ravi"}]
     ->  const arr = new Array(4) // it will create 4 empty blocks which will have undefined value stored.
-        arr.length ---> 4
+        arr.length --> 4
     ->  To Check array type:
         arr = [1,"",1.9];
         arr.constructor === Array --> true
@@ -11,9 +11,9 @@
         Array.isArray(arr)  --> true
         Array.isArray(12)   --> false
     ->  ("kks").constructor === Array ->  false
-    -> arr.length => it is variable not a function
+    ->  arr.length => it is variable not a function
 */
-//  Array pre-defined functions in javascript:
+//  Array's pre-defined functions in javascript:
 let nums = [1,2,3,4,5,6,7,8,9,10];
 
 // array.map
@@ -24,7 +24,6 @@ const mappedArray_2 = nums.map(item=>{
     return item + 10
 })
 console.log("mappedArray: <><><>:",mappedArray_2)
-
 // filter:
 const filteredArray = nums.filter(item => item%2 == 0);
 console.log("filteredArray: ",filteredArray);

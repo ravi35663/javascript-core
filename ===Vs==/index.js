@@ -1,24 +1,26 @@
 // What is the difference between == and === operators
 /**
- * JavaScript provides both strict(===, !==) and type-converting(==, !=) equality 
- * comparison. The strict operators take type of variable in consideration, while 
- * non-strict operators make type correction/conversion based upon values of 
- * variables. The strict operators follow the below conditions for different types,
- * 
- * 1)Two strings are strictly equal when they have the same sequence of characters, 
- *   same length, and same characters in corresponding positions.
- * 
+ * JavaScript provides both strict(===, !==) and type-converting(==, !=) equality comparison. 
+ * 1) Two strings are strictly equal when they have the same sequence of characters, same length, and 
+ *    same characters in corresponding positions.
  * 2) Two numbers are strictly equal when they are numerically equal. 
  *    i.e, Having the same number value. There are two special cases in this,
-       i) NaN is not equal to anything, including NaN.
+       i) NaN is not equal to anything, including NaN. (-> NaN == NaN-> false, NaN == 'a'-> false)
        ii) Positive and negative zeros are equal to one another.
- * 
    3) Two Boolean operands are strictly equal if both are true or both are false.
-
    4) Two objects are strictly equal if they refer to the same Object.
-
+      e.g. 
+            i)Example 1:
+                  let obj = {name:"Ravi"}
+                  obj2 = obj
+                  obj==obj2 -> true
+                  obj === obj2 -> true , because obj and obj2 has same reference:
+            2) Example 2:
+                  let obj = {name:"Ravi"}
+                  obj2 = {...obj}
+                  obj2 == obj ==> false. because obj and obj2 has different reference:
    5) Null and Undefined types are not equal with ===, but equal with ==. 
-      i.e, null===undefined --> false but null==undefined --> true
+      i.e, null === undefined --> false but null == undefined --> true
 */
 
 // Some of the example which covers the above cases,
@@ -30,5 +32,5 @@ null == undefined // true
 null === undefined // false
 '0' == false // true
 '0' === false // false
-// []==[] or []===[] //false, refer different objects in memory
-// {}=={} or {}==={} //false, refer different objects in memory
+// [] == [] or [] === [] //false, refer different objects in memory
+// {} == {} or {} === {} //false, refer different objects in memory

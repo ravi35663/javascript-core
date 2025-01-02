@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example of event bubbling</h1>
+    <div onclick="handleDiv1Click()">
+        Div 1
+        <div onclick="handleDiv2Click(event)"> Div 2:
+            <div onclick="handleDiv3Click(event)">Div 3</div>
+        </div>
+    </div>
+    <script>
+        function handleDiv1Click(e){
+            console.log("Div 1 is clicked")
+        }
+        function handleDiv2Click(e){
+            e.stopPropagation()
+            console.log("Div 2 is clicked")
+        }
+        function handleDiv3Click(event){
+            console.log("Div 3 is clicked")
+            event.stopPropagation()
+        }
+    </script>
+</body>
+</html>

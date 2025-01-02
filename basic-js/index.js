@@ -1,10 +1,10 @@
 /*
 ==> Javascript Data types:
-    -> Number : - Any positive , negative or rational number . 
-    -> Boolean : - (true or false)
-    -> String : - Any string (e.g. "john doe")
-    -> null 
-    -> undefined
+    -> Number :-    Any positive , negative or rational number . 
+    -> Boolean :-   (true or false)
+    -> String :-    Any string (e.g. "john doe")
+    -> null :       Intensional absence of the data.
+    -> undefined:   Memory block is assigned but there is no value available.
 */
 
 /*
@@ -25,18 +25,18 @@
             name:"sumit kumar",
             age: 25,
             mobile_number: 989124882,
-            occupation:"Software engineer"
+            occupation: "Software engineer"
         }
 */
 
 /*
 ==> Operators:
     1) Arithmetic operators:
-        ->  + | - | * | / | % (Modulus operator) | ++ (Increment operator) | -- (decrement operator)
+        ->  '+' | '-' | '*' | '/' | '%' (Modulus operator) | '++' (Increment operator) | '--' (decrement operator)
     2) JS Comparison / Relational Operators: 
         -> == | === (Check both type and value) | !== |  > | >= | < | <= 
     3) Logical Operators:
-        -> && (Logical AND) | || (Logical OR) | ! (Logical NOT)
+        -> '&&' (Logical AND) | '||' (Logical OR) | '!' (Logical NOT)
 
     4) JS Conditional Statements :-
         —> if (some condition){
@@ -56,13 +56,12 @@
             }else {
                 // This else block is optional in case of else if ladder 
             }
-        -> ternary operator : - (condition1 ? if-statement : else-statement)
-        —> Switch case : -
+        -> Ternary Operator : - (condition1 ? if-statement : else-statement)
+        —> Switch Case : -
             switch (expression){
                 case x:
                     //some code;
-                    // To avoid any break use, you can return something instead , if switch-case is
-                    // used within a function 
+                    // To avoid break, you can use return instead, if switch-case is used within a function 
                     break;
                 case y: 
                     //Some code
@@ -80,9 +79,10 @@
                 // Some codes
             }
 
-            —> do{
+        —> do{
                 // Do-while loops run at least one time
             } while(some conditions);
+    
     6) Bitwise Operator : -
         -> Bitwise operator works on 32 bits numbers
         -> Bitwise operator compares elements on each binary bit . 
@@ -103,22 +103,22 @@
 /*
 ==> Notes : -
     ->  You can check primitive data types with 'typeof' but you cannot check object types with typeof.
-    ->  'typeof' only returns number,string,null,boolean,undefined, object and functions.
-    ->  To check any data types you can use: variable.constructor === Data_type
-    -> e.g. ([1]).constructor === Array     -> true
-            ("name").constructor === Array  -> false
-            ("name").constructor === String -> true
-            (10).constructor === Number     -> true
-    -> In Javascript, function is like a variable that takes the place in the memory .
-    —> Number, String and boolean are primitive data types in JS
-    —> null and undefined are trivial(less to primitive,less important) data types.
-    —> Objects and array are composite data types
-    —> In JS switch-case you can take string, boolean and integer or you can use primary DT.
-    —> To delete any value from an object use the below method .
-        car = {name:"tata tigor", "price": 123, model: "s3"}
-        delete car.name ===> It will delete the "name" key and value from the car object
-    —> Everything in Javascript is an object . Boolean, Number, String, Dates, Maths, RE are always an object.
-    -> function vs method: if you write any function inside any Class or object it is called method otherwise it is called function.
+    ->  'typeof' only returns number, string, null, boolean, undefined, object and functions.
+->      To check any data types you can use: 'variable.constructor === Data_type'
+    ->  e.g.    ([1]).constructor       => Array  
+                ("name").constructor    => String
+                (10).constructor        => Number
+    ->  In Javascript, function is like a variable that takes the place in the memory.
+    —>  Number, String and Boolean are primitive data types in JS
+    —>  null and undefined are trivial(less to primitive, less important) data types.
+    —>  Objects and array are composite data types
+    —>  In JS switch-case you can take string, boolean and integer or you can use primary DT.
+    —>  To delete any value from an object use the below method .
+            car = {name:"tata tigor", "price": 123, model: "s3"}
+            delete car.name ===> It will delete the "name" key and value from the car object
+    —>  Everything in Javascript is an object. Boolean, Number, String, Dates, Maths, RE are always an object.
+    ->  Function vs Method: if you write any function inside any Class or object it is called method 
+        otherwise it is called function.
     ->  To find datatype of the variable use "typeof()".
             let name = "sumit";    --> typeof(name) --> str
 */
@@ -126,12 +126,12 @@
 /*
 ==> Mutation : - 
     ->  Mutation means manipulating data type (or values) with its original values.
-    —>  Immutable values means once created cannot be changed .(Primitive data type )
+    —>  Immutable values means once created cannot be changed. (Primitive data type )
     —>  let person = {
             name:”sumit”,
             age:25
         }
-	    Person.age = 30;
+	    person.age = 30;
     -> string is immutable in javascript
     -> *Primitive data types are immutables.
 Note : - Here we can change the value of the object hence it is mutable .
@@ -141,20 +141,21 @@ Note : - Here we can change the value of the object hence it is mutable .
 ==> Deep Cloning : -
     ->  If we create an object (any object like array or composite data type) and assign each attribute of 
         the previous object to a newly created object then changes made in any of the objects won’t affect 
-        any other object . That is known as deep cloning .
+        any other object. That is known as deep cloning .
         e.g. 
         let  original ={
             name:”sumit”,
             age:25
         }
     -> let duplicate = original  (// Shallow copying)
-        Here both “original” and “duplicate” objects have the same address and it is known as shallow  copying.
-        And in this case if we make any changes to any of the objects either 'original' or 'duplicate', it 
-        affects other objects ('original' or 'duplicate') as well .
+        Here both “original” and “duplicate” objects have the same address and it is known as shallow 
+        copying. And in this case if we make any changes to any of the objects either 'original' or 
+        'duplicate', it affects other objects ('original' or 'duplicate') as well .
 
     -> Deep cloning or copying  
         # Method-1
-        let duplicate = {...original} (//this is known as deep cloning or deep copying this is the first level of deep cloning).
+        let duplicate = {...original} 
+        -> this is known as deep cloning or deep copying this is the first level of deep cloning.
         
         #Method - 2:
         let duplicate_1 = Object.assign({},original) // this is also deep cloning this is also the first 

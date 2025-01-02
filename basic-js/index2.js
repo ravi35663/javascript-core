@@ -1,21 +1,21 @@
 /*
 ==> Execution Context:
     ->  Everything in javascript happens inside an “Execution Context”:
-    ->  Execution context is a block where when javascript program is run an execution context is created:
-    ->  Inside that execution context two thing is there:
+    ->  Execution context is a block where memory created for the variable and code available for the execution.
+    ->  when javascript program is run an execution context is created:
+    ->  Inside that execution context two thing are available:
         Execution Context:
             1) Memory component / Variable Env.:
-                ->  All the variable and functions are stored here
+                ->  All the variable and functions are stored here (consume memory)
             2) Code Comp. / Thread of Execution:
                 ->  Execution of the code happens here (One-Line-At-A-Time)
     
     ->  Javascript is a synchronous single threaded language.
-    ->  When you run a javascript program, an execution context is created .
     ->  When Javascript is run, initially memory is assigned to all the variables and functions. 
         That phase is known as memory creation phase or creation phase.
     ->  When function is called (square(10)) an execution context for that function is created and 
         that function pushed into the stack for the execution.
-    ->  Once the program / function return something then execution context of that program/function 
+    ->  Once the program/function return something then execution context of that program/function 
         will be deleted and that program/function popped out from the stack.
 */
 
@@ -32,7 +32,7 @@ var sq2 = square(20);
 /*
     Execute above program line-by-line:
     1) Initial phase of main program:
-        in first phase memory part is run and whoever variable declare by var, js assigned undefined 
+        In the first phase memory part is run and whoever variable declare by var, js assigned undefined 
         to them.
         Memory Phase:                                Code Phase:
             n: undefined (ini.phase)  
@@ -42,7 +42,7 @@ var sq2 = square(20);
 
     2) Next Phase of main program:
         Memory Phase:                                Code Phase:
-            n: undefined -> 4                         -> Executed the n = 4
+            n: undefined -> 4                         -> Executed then n = 4
             square: function {..} (ini.phase)         -> pass
             sq1: undefined (ini.phase) -> 100         -> Executed this line then an new execution context is create for square(10) and after execution of this sq1 = 100
             sq2: undefined (ini.phase) -> 400         -> Executed this line then an new execution context is create for square(20) and after execution of this sq2 = 400
@@ -60,7 +60,7 @@ var sq2 = square(20);
 
 /*
 Note:
-    ->  When the work is done , the execution context is deleted from that function / program.
+    ->  When the work is done, the execution context is deleted from that function/program.
     ->  For each function call an execution context is created and when the function call is done, 
         the execution context will be deleted.
     ->  Any program that starts to run a global execution context is created.
@@ -84,9 +84,9 @@ Notes:
     ==> Single thread Meaning :- 
         -> run one command at a time
         -> first line executed then it go to next line
-    ->  Empty file is a smallest or shortest javascript file. Because a global execution context is 
-        created and reserved memory for that context if you run the program.
-    ->  Lots of variables and functions are created by default by JS-Engine.
+    ->  Empty file is a smallest or shortest javascript file. Because a global execution context is created 
+        and reserved memory for that context if you run the program.
+    ->  Lots of variables and functions are created by-default by JS-Engine.
     ->  At the global level ‘this’ === ‘window’ (On browser)
     ->  anything not inside a function is in a global space.
     ->  var a = 10;
@@ -99,7 +99,7 @@ Notes:
     ->  JS-Engine create “window” and “this” keyword itself (window only works at client)
     ->  Whenever a execution context is created a lexical environment is also created.
     ->  Lexical environment is local memory along with lexical environment of its parents 
-    ->  i.e , it keeps the variables and functions of its parents.
+    ->  i.e. it keeps the variables and functions of its parents.
 */
 
 /*
@@ -154,11 +154,11 @@ Note:
 
 /*
 ===> Advantages of JS:
-    ->  Regardless of where you host javascript code on the client side , it always executes on the 
-        client side and reduces a lot of bandwidth and makes execution very fast .
-    ->  Javascript is cross-platform language 
-    ->  Javascript is dynamic or  weak typed language 
-    ->  Both frontend and backend can be designed in JS
+    ->  Regardless of where you host javascript code on the client side, it always executes on the client 
+        side and reduces a lot of bandwidth and makes execution very fast.
+    ->  Javascript is cross-platform language.
+    ->  Javascript is dynamic or  weak typed language. 
+    ->  Both frontend and backend can be designed in JS.
 */
 
 
@@ -187,12 +187,6 @@ Note:
 ==> null Vs undefined: -
     -> "null" represents the intentional absence of any object value. While,  
     -> "undefined" represents a variable that has been declared but has not been assigned a value.
-
-==> '==' Vs '===' : -
-    ->  The '==' operator performs type coercion, which means it converts operands to a common type and 
-        then checks the equality.
-    ->  In the other hand '===' operator does not perform type coercion and it check exact type 
-        (strictly)
 */
 
 
@@ -203,6 +197,4 @@ Note:
         const decimal2 = parseInt(“10”,10) -> explicitly parse as 10
         const binary = parseInt(“1010”,2) -> 10, parse as Binary (2)
         const hex = parseInt(“1A”,16) -> parse on base 16 value would be 26.
-
-
 */

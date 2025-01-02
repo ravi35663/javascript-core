@@ -39,8 +39,8 @@ console.log("Value of a and b ",a,b);
 
 ==> There is three type of scopes 
     1)Global scope:-    Global Memory
-    2)Script Scope:-    Where let and const are hoisted in main JS File  
-    3)Block Scope:-     (in a in-memory block)
+    2)Script Scope:-    
+    3)Block Scope:-     Where let and const are hoisted in main JS File.(in a in-memory block)
 
 ==> Illegal Shadowing : -
     ->  let a = 10;
