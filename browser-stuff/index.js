@@ -1,9 +1,9 @@
 // What is the difference between window and document
 /*
- *Window:
- 1) Widow is a root level element of any web page
- 2) By default window object is available implicitly in the page
- 3) It has methods like alert(), confirm() and properties like document, location
+ ==> Window:
+    1) Window is a root level element of any web page
+    2) By default window object is available implicitly in the page
+    3) It has methods like alert(), confirm() and properties like document, location ...etc:
 */
 /*
  *Document
