@@ -18,7 +18,7 @@ let nums = [1,2,3,4,5,6,7,8,9,10];
 
 // array.map
 const mappedArray = nums.map(item=> item * 10 ); // One-Liner-Code
-console.log("mappedArray: <><><>:",mappedArray)
+console.log("mappedArray: <><><>:",mappedArray)//
 
 const mappedArray_2 = nums.map(item=>{
     return item + 10
