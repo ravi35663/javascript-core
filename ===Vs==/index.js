@@ -1,13 +1,17 @@
 // What is the difference between == and === operators
 /**
  * JavaScript provides both strict(===, !==) and type-converting(==, !=) equality comparison. 
+ 
  * 1) Two strings are strictly equal when they have the same sequence of characters, same length, and 
  *    same characters in corresponding positions.
+
  * 2) Two numbers are strictly equal when they are numerically equal. 
  *    i.e, Having the same number value. There are two special cases in this,
        i) NaN is not equal to anything, including NaN. (-> NaN == NaN-> false, NaN == 'a'-> false)
        ii) Positive and negative zeros are equal to one another.
+
    3) Two Boolean operands are strictly equal if both are true or both are false.
+
    4) Two objects are strictly equal if they refer to the same Object.
       e.g. 
             i)Example 1:

@@ -3,31 +3,35 @@
     void(0) is used to prevent the page from refreshing. This will be helpful to eliminate the unwanted 
     side-effect, because it will return the undefined primitive value. 
     It is commonly used for HTML documents that use href="javascript:void(0);" within an <a> element. 
+    
     i.e, when you click a link, the browser loads a new page or refreshes the same page. 
     But this behavior will be prevented using this expression. 
+   
     For example, the below link notify the message without reloading the page
-
     <a href="javascript:void(0)" onclick="alert("Well done!")">Click Me</a>
 */
-
-//Is JavaScript a compiled or interpreted language
 /*
-->  JavaScript is an interpreted language, not a compiled language. An interpreter in the browser reads 
-    over the JavaScript code, interprets each line, and runs it. 
-->  Nowadays modern browsers use a technology known as Just-In-Time (JIT) compilation, which compiles 
-    JavaScript to executable bytecode just as it is about to run.
+    Interpret : to explain or understand the meaning of something
+*/
+
+//Is JavaScript a compiled or interpreted  language
+/*
+    ->  JavaScript is an interpreted language, not a compiled language. An interpreter in the browser reads 
+        over the JavaScript code, interprets each line, and runs it. 
+    ->  Nowadays modern browsers use a technology known as Just-In-Time (JIT) compilation, which compiles 
+        JavaScript to executable bytecode just as it is about to run.
 */
 
 //What are events
 /*
-    Events are "things" that happen to HTML elements. 
-    When JavaScript is used in HTML pages, JavaScript can react on these events. 
-    Some of the examples of HTML events are,
-        1) Web page has finished loading
-        2) Input field was changed
-        3) Button was clicked
-    ...etc
-    Let's describe the behavior of click event for button element,
+    ->  Events are "things" that happen to HTML elements. 
+    ->  When JavaScript is used in HTML pages, JavaScript can react on these events. 
+    ->  Some of the examples of HTML events are,
+            1) Web page has finished loading
+            2) Input field was changed
+            3) Button was clicked
+        ...etc
+        Let's describe the behavior of click event for button element,
 
     <!doctype html>
     <html>
@@ -47,75 +51,76 @@
 
 //What is the use of preventDefault method
 /*
-->  The preventDefault() method cancels the event if it is cancelable, meaning that the default action 
-    or behavior that belongs to the event will not occur. 
+    ->  The preventDefault() method cancels the event if it is cancelable, meaning that the default action 
+        or behavior that belongs to the event will not occur. 
 
-->  For example, prevent form submission when clicking on submit button and prevent opening the page 
-    URL when clicking on hyperlink are some common use cases.
+    ->  For example, prevent form submission when clicking on submit button and prevent opening the page 
+        URL when clicking on hyperlink are some common use cases.
     
     *document.getElementById("link").addEventListener("click", function (event) {
         event.preventDefault();
     });
-->  Note: Remember that not all events are cancelable.
+
+==> Note: **Remember that not all events are cancelable.
 */
 
 //What is the use of stopPropagation method
 /*
-->  The stopPropagation method is used to stop the event from bubbling up the event chain. 
-->  For Example: 
-        The below nested divs with stopPropagation method prevents default event propagation when 
-        clicking on nested div(Div1).
+    ->  The stopPropagation method is used to stop the event from bubbling up the event chain. 
+    ->  For Example: 
+            The below nested 'divs' with stopPropagation method prevents default event propagation when 
+            clicking on nested div(Div1).
 
-    <p>Click DIV1 Element</p>
-    <div onclick="secondFunc()">
-        DIV 2
-        <div onclick="firstFunc(event)"> DIV 1 </div>
-    </div>
-    <script>
-        function firstFunc(event) {
-            alert("DIV 1");
-            event.stopPropagation();
-        }
+            <p>Click DIV1 Element</p>
+            <div onclick="secondFunc()">
+                DIV 2
+                <div onclick="firstFunc(event)"> DIV 1 </div>
+            </div>
+            <script>
+                function firstFunc(event) {
+                    alert("DIV 1");
+                    event.stopPropagation();
+                }
 
-        function secondFunc() {
-            alert("DIV 2");
-        }
-    </script>
+                function secondFunc() {
+                    alert("DIV 2");
+                }
+            </script>
 */
 
-//What is BOM
+//What is BOM:
 /*
-->  The Browser Object Model (BOM) allows JavaScript to "talk to" the browser. 
-->  It consists of the objects navigator, history, screen, location and document which are children of 
-    the window. 
-->  The Browser Object Model is not standardized and can change based on different browsers.
-    Window:
-        -> DOM (document)
-        -> BOM (Iframes, screen, history, location, ...etc)
-        -> Javascript (Object, Array, functions,  ...etc)
+    ->  The Browser Object Model (BOM) allows JavaScript to "talk to" the browser. 
+    ->  It consists of the objects navigator, history, screen, location and document which are children of 
+        the window. 
+    ->  The Browser Object Model is not standardized and can change based on different browsers.
+        Window:
+            -> DOM (document)
+            -> BOM (Iframes, screen, history, location, ...etc)
+            -> Javascript (Object, Array, functions,  ...etc)
 */
 
 
 //What is the use of setTimeout
 /*
-->  The setTimeout() method is used to call a function or evaluate an expression after a specified 
-    number of milliseconds. 
-->  For Example: 
-    let's log a message after 2 seconds using setTimeout method,
-        setTimeout(()=>{
-            console.log("Executed after 2 seconds");
-        },2*1000);
+    ->  The setTimeout() method is used to call a function or evaluate an expression after a specified 
+        number of milliseconds. 
+    ->  For Example: 
+        let's log a message after 2 seconds using setTimeout method,
+            setTimeout(()=>{
+                console.log("Executed after 2 seconds");
+            },2*1000);
 */
 
 //What is the use of setInterval
 /*
-->  The setInterval() method is used to call a function or evaluate an expression at specified intervals 
-    in milliseconds. 
-->  For Example: 
-    let's log a message after 2 seconds using setInterval method,
-    setInterval(()=>{
-        console.log("Run at every 2 second");
-    },2000);
+    ->  The setInterval() method is used to call a function or evaluate an expression at specified intervals 
+        in milliseconds. 
+    ->  For Example: 
+        let's log a message after 2 seconds using setInterval method,
+        setInterval(()=>{
+            console.log("Run at every 2 second");
+        },2000);
 */
 
 //What is ECMAScript
@@ -128,97 +133,74 @@
 
 //What are PWAs
 /*
-->  Progressive web applications (PWAs) are a type of mobile app delivered through the web, built using 
-    common web technologies including HTML, CSS and JavaScript. 
-->  These PWAs are deployed to servers, accessible through URLs, and indexed by search engines.
+    ->  Progressive web applications (PWAs) are a type of mobile app delivered through the web, built using 
+        common web technologies including HTML, CSS and JavaScript. 
+    ->  These PWAs are deployed to servers, accessible through URLs, and indexed by search engines.
 */
 
 //What is the purpose of clearTimeout method
 /*
-->  The clearTimeout() function is used in javascript to clear the timeout which has been set by 
-    setTimeout() function before that. 
-    i.e, The return value of setTimeout() function is stored in a variable and it’s passed into the 
-         clearTimeout() function to clear the timer.
+    ->  The clearTimeout() function is used in javascript to clear the timeout which has been set by 
+        setTimeout() function before that. 
+        i.e, The return value of setTimeout() function is stored in a variable and it’s passed into the 
+            clearTimeout() function to clear the timer.
 
-->  For Example: the below setTimeout method is used to display the message after 3 seconds. 
-    This timeout can be cleared by the clearTimeout() method.
+    ->  For Example: the below setTimeout method is used to display the message after 3 seconds. 
+        This timeout can be cleared by the clearTimeout() method.
 
-    <script>
-        var msg;
-        function greeting() {
-            alert('Good morning');
-        }
-        function start() {
-            msg = setTimeout(greeting, 3000);
-        }
+        <script>
+            var msg;
+            function greeting() {
+                alert('Good morning');
+            }
+            function start() {
+                msg = setTimeout(greeting, 3000);
+            }
 
-        function stop() {
-            clearTimeout(msg);
-        }
-    </script>
+            function stop() {
+                clearTimeout(msg);
+            }
+        </script>
 */
 
 //What is the purpose of clearInterval method
 /*
-->  The clearInterval() function is used in javascript to clear the interval which has been set by 
-    setInterval() function. 
-    i.e,    The return value returned by setInterval() function is stored in a variable and it’s passed 
-            into the clearInterval() function to clear the interval.
-->  For Example: 
-    The below setInterval method is used to display the message for every 3 seconds. 
-    This interval can be cleared by the clearInterval() method.
+    ->  The clearInterval() function is used in javascript to clear the interval which has been set by 
+        setInterval() function. 
+        i.e,    The return value returned by setInterval() function is stored in a variable and it’s passed 
+                into the clearInterval() function to clear the interval.
+    ->  For Example: 
+        The below setInterval method is used to display the message for every 3 seconds. 
+        This interval can be cleared by the clearInterval() method.
 
-    <script>
-        var msg;
-        function greeting() {
-            alert('Good morning');
-        }
-    
-        function start() {
-            msg = setInterval(greeting, 3000);
-        }
+        <script>
+            var msg;
+            function greeting() {
+                alert('Good morning');
+            }
+        
+            function start() {
+                msg = setInterval(greeting, 3000);
+            }
 
-        function stop() {
-            clearInterval(msg);
-        }
-    </script>
+            function stop() {
+                clearInterval(msg);
+            }
+        </script>
 */
 
 //How do you redirect new page in javascript
 /*
-    In vanilla javascript, you can redirect to a new page using the location property of window object. 
-    The syntax is:
     function redirect() {
         // you can replace "newPage.html" to any valid url
         window.location.href = "newPage.html";
     }
 */
 
-//How do you check whether a string contains a substring
-/* Method-1 (ES6)
-    let str = "hello world";
-    if(str.includes('hello')){
-        console.log("String contains");
-    }
-*/
-
-/* Method-2 (ES5)
-    let str = "hello world";
-    if(str.indexOf('hello') !== -1){
-        console.log("String contains");
-    }
-*/
-
-/* Method-3 (Advance way)
-    var mainString = "hello",
-    regex = /hell/;
-    regex.test(mainString)
-*/
 
 //How do you get the current url with javascript
 /*
-    You can use window.location.href expression to get the current url path and you can use the same 
-    expression for updating the URL too.
+    -> By using 'window.location.href' 
 */
 
 //What are the various url properties of location object
@@ -236,25 +218,13 @@
     *8) hash - The anchor portion of the URL (#section)
 */
 
-//How to get query string values in javascript
+//How to get query string values in javascript?
 /*
-    You can use 'URLSearchParams' to get query string values in javascript. 
-    Let's see an example to get the client code value from URL query string,
+    ->  You can use 'URLSearchParams' to get query string values in javascript. 
+    ->  Let's see an example to get the client code value from URL query string,
 
-    const urlParams = new URLSearchParam(window.location.search);
-    const clientCode = urlParams.get("clientCode");
-*/
-
-//What are the pros and cons of for loop ?
-/*
-    The for-loop is a commonly used iteration syntax in javascript. It has both pros and cons.
-    *Pros:
-        1) Works on every environment
-        2) You can use break and continue flow control statements
-
-    *Cons:
-        1) Too verbose(wordy)
-        2) Imperative (Crucial)
+        const urlParams = new URLSearchParam(window.location.search);
+        const clientCode = urlParams.get("clientCode");
 */
 
 //How do you display current date and time?
@@ -270,21 +240,17 @@
 
 //How do you compare two date objects
 /*
-    You need to use date.getTime() method to compare date values instead of comparison 
-    operators (==, !=, ===, and !== operators).
-    i.e.
-        var d1 = new Date();
-        var d2 = new Date(d1);
-        console.log(d1.getTime() === d2.getTime()); //true
-        console.log(d1 === d2); // false
+    ->  You need to use date.getTime() method to compare date values instead of comparison 
+        operators (==, !=, ===, and !== operators).
+    ->  i.e.
+            var d1 = new Date();
+            var d2 = new Date(d1);
+            console.log(d1.getTime() === d2.getTime()); //true
+            console.log(d1 === d2); // false
 */
 
 // How do you check if a string starts with another string
 /*
-->  You can use ECMAScript 6 String.prototype.startsWith() method to check if a string starts with 
-    another string or not. 
-->  But it is not yet supported in all browsers. 
-    Let's see an example to see this usage.
     i.e.
     "Good morning".startsWith("Good"); // true
     "Good morning".startsWith("morning"); // false
@@ -292,45 +258,28 @@
 
 //How do you trim a string in javascript
 /*
-    JavaScript provided a trim method on string types to trim any whitespaces present at the beginning 
-    or ending of the string.
-    let word = "    hello World.          ";
-    console.log(word.trim()) // hello World.
+    ->  JavaScript provided a trim method on string types to trim any whitespaces present at the beginning 
+        and at the end of the string.
+    -> Example:
+            let word = "    hello World.          ";
+            console.log(word.trim()) // hello World.
 */
 
-//How do you add a key value pair in javascript
-/*
-    There are two possible solutions to add new properties to an object. 
-    Let's take a simple object to explain these solutions.
-    
-    var object = {
-        key1: value1,
-        key2: value2,
-    };
-
-    * Way-1(Using dot notation: This solution is useful when you know the name of the property)
-        object.key2="new value"
-
-    * Way-2 (Using square bracket notation: This solution is useful when the name of the property is 
-        dynamically determined.)
-    object["key3"] = "value3"
-*/
 
 //Is the !-- notation represents a special operator
 /*
-->  No,that's not a special operator. But it is a combination of 2 standard operators one after the other,
-        1) A logical not (!)
-        2) A prefix decrement (--)
-->  At first, the value decremented by one and then tested to see if it is equal to zero or not for 
-    determining the truthy/falsy value.
+    ->  No,that's not a special operator. But it is a combination of 2 standard operators one after the other,
+            1) A logical not (!)
+            2) A prefix decrement (--)
+    ->  At first, the value decremented by one and then test to see if it is equal to zero or not for 
+        determining the truthy/falsy value.
 */
 
 //How do you assign default values to variables
 /*
-    You can use the logical or operator || in an assignment expression to provide a default value. 
-    The syntax looks like as below,
-    i.e.
-        var a = b || c;
-    As per the above expression, variable 'a 'will get the value of 'c' only if 'b' is falsy 
-    (if is null, false, undefined, 0, empty string, or NaN), otherwise 'a' will get the value of 'b'.
+    ->  You can use the logical or operator || in an assignment expression to provide a default value. 
+    ->  The syntax looks like as below,
+            var a = b || c;
+    ->  As per the above expression, variable 'a 'will get the value of 'c' only if 'b' is falsy 
+        (if is null, false, undefined, 0, empty string, or NaN), otherwise 'a' will get the value of 'b'.
 */
