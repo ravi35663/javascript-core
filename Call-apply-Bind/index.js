@@ -21,4 +21,4 @@ greetings.apply(person,[message,punctuation]);
 const  futureFun = greetings.bind(person,message);
 futureFun(punctuation);
 // greetings.bind(person,"How are you",'?');
-// call : call is used to call a function with specifi context;
+// call : call is used to call a function with specific context;

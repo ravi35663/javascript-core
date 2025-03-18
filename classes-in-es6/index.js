@@ -1,8 +1,8 @@
 //What are classes in ES6
 /**
- * In ES6, Javascript classes are primarily syntactic sugar over JavaScript’s 
- * existing prototype-based inheritance. For example, the prototype based 
- * inheritance written in function expression as below,
+  In ES6, Javascript classes are primarily syntactic sugar over JavaScript’s existing prototype-based 
+  inheritance. 
+  For example, the prototype based inheritance written in function expression as below,
 */
 // This is used in earlier javascript (Before ES6)
 function Bike(model,color){
@@ -13,6 +13,9 @@ function Bike(model,color){
 Bike.prototype.getInfo = function (){
     return this.model+" bike has "+this.color+" color";
 }
+const bike = new Bike();
+bike.getInfo()
+
 
 // Now in ES6 it described as
 class Bike2{
@@ -73,11 +76,10 @@ class Person{
 
 class Student extends Person{
     constructor(name,age,roll_no){
-        super(name,age);
+        super(name,age); // You can only user super method in constructor method
         this.roll_no  = roll_no;
     }
 }
 
 const student = new Student("Sunny",20,1); 
 console.log(student.age,student.name,student.roll_no); // 20 Sunny 1
-

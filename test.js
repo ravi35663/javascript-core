@@ -1,8 +1,11 @@
-function person(name,age){
-    return {name,age};
+function Car(model,color){
+    this.model = model;
+    this.color = color;
 }
 
-person("ravi","26");
+Car.prototype.getInfo = function(){
+    return "Model of a car is: " + this.model + "and color or the car is: "+ this.color;
+}
 
-console.log("Person 2:");
-person("Sumit","27");
+const car = new Car("2020","Black");
+console.log("Car is: ",car.getInfo());

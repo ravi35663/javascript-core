@@ -1,12 +1,11 @@
 // What are closures
 /*
- A closure is the combination of a function and the lexical environment within 
- which that function was declared. 
- i.e, It is an inner function that has access to the outer or enclosing function’s 
- variables. The closure has three scope chains
-    1) Own scope where variables defined between its curly brackets
-    2) Outer function’s variables
-    3) Global variables
+ A closure is the combination of a function and the lexical environment where that function is declared. 
+    i.e, It is an inner function that has access to the outer or enclosing function’s variables. 
+    The closure has three scope chains
+        1) Own scope where variables defined between its curly brackets
+        2) Outer function’s variables
+        3) Global variables
 */
 
 function Welcome(name){
@@ -81,8 +80,8 @@ z(); // 100;
 
 function x(){
     setTimeout(()=>{
-    console.log("Hiii");
-},5000)
+        console.log("Hiii");
+    },5000)
     console.log("Hello")
 }
 x();
