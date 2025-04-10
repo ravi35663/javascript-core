@@ -24,7 +24,7 @@
 
 //What are events
 /*
-    ->  Events are "things" that happen to HTML elements. 
+    ->  Events are "things" or "some action" that happen to HTML elements. 
     ->  When JavaScript is used in HTML pages, JavaScript can react on these events. 
     ->  Some of the examples of HTML events are,
             1) Web page has finished loading
@@ -38,7 +38,7 @@
     <head>
         <script>
             function greeting() {
-            alert('Hello! Good morning');
+                alert('Hello! Good morning');
             }
         </script>
     </head>

@@ -7,7 +7,12 @@
 
  * 2) Two numbers are strictly equal when they are numerically equal. 
  *    i.e, Having the same number value. There are two special cases in this,
-       i) NaN is not equal to anything, including NaN. (-> NaN == NaN-> false, NaN == 'a'-> false)
+       i) NaN is not equal to anything, including NaN. 
+            (
+                  -> NaN == NaN     -> false, 
+                  -> NaN == 'a'     -> false
+                  -> NaN == 2       -> false
+            )
        ii) Positive and negative zeros are equal to one another.
 
    3) Two Boolean operands are strictly equal if both are true or both are false.
@@ -24,7 +29,8 @@
                   obj2 = {...obj}
                   obj2 == obj ==> false. because obj and obj2 has different reference:
    5) Null and Undefined types are not equal with ===, but equal with ==. 
-      i.e, null === undefined --> false but null == undefined --> true
+      i.e,  null === undefined  -> false 
+            null == undefined   -> true
 */
 
 // Some of the example which covers the above cases,

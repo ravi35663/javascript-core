@@ -107,7 +107,7 @@ checkDebugger();
 //How do you detect a mobile browser without regexp
 /*
     You can detect mobile browsers by simply running through a list of devices and checking if the 
-    useragent matches anything. This is an alternative solution for RegExp usage,
+    user-agent matches anything. This is an alternative solution for RegExp usage,
     function detectmob() {
         if (
             navigator.userAgent.match(/Android/i) ||

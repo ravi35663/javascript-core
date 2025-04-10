@@ -63,7 +63,7 @@ Note:
     ->  When the work is done, the execution context is deleted from that function/program.
     ->  For each function call an execution context is created and when the function call is done, 
         the execution context will be deleted.
-    ->  Any program that starts to run a global execution context is created.
+    ->  Any program that starts to run, a global execution context is created.
     ->  When any function is called inside the program then that function pushed into the execution 
         context and when the work of that program is done it pops out from the execution context. 
         It follows LIFO (Last in first out)
@@ -157,7 +157,7 @@ Note:
     ->  Regardless of where you host javascript code on the client side, it always executes on the client 
         side and reduces a lot of bandwidth and makes execution very fast.
     ->  Javascript is cross-platform language.
-    ->  Javascript is dynamic or  weak typed language. 
+    ->  Javascript is dynamic or weak typed language. 
     ->  Both frontend and backend can be designed in JS.
 */
 
