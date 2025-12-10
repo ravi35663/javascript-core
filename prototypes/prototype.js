@@ -4,26 +4,34 @@
         then javascript engine automatically assigned some hidden prototype
         (method and properties) to those objects(everything in js is an object) 
         and that is known as prototypes in JS.
+
     -> e.g. let arr = [10,20,30,40,50]
             arr.push, arr.pop,arr.length ....etc are hidden prototypes of JS
             you can also use these prototypes with some other syntax
             .e.g.arr.__proto__ to see all prototypes
+
     -> arr.__proto__  and Array.prototype are equal and it will show all prototypes of array
         same things happens with other datatype, methods and class ..etc
+
     ->  prototype is an object which have all methods and properties of 
         particular data type, functions, class ..etc
+
     -> here arr.__proto__ is and object ((arr.__proto__).__proto__) is also an object and so on
     -> obj = {name:"Ravi",city:"Motihari"}
     -> obj.__proto__ => prototypes of Object => obj.__proto__.__proto__ is null
     -> obj.__proto__ === Object.prototype
+
     Note: - Everything in javascript is an object , how?
         because if you check anything in javascript with prototypes they ended with an object
     -> Function.prototype == fun.__proto__
+
     ->  why does JS dev used __proto__ ? they can have any name right?
         -> this is because you would not ended up with any name mistakes like
             you won't write __ by mistake
-    -> Each javascript object has internal property which is prototype this property
+
+    ->  Each javascript object has internal property which is prototype this property
         point to another object which is Object.prototype
+
     ==> Object.prototype : - it is top level prototype object in javascript.
         -> it serves as defaults prototype of all objects in javascript
         -> It provides common methods and properties such as toString(), hasOwnProperty(),
