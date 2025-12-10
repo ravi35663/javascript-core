@@ -30,7 +30,6 @@
        
        *const firstOrder = () => console.log("I am a first order function!");
 */
-
 /*
     Q:What is a higher order function?
     A: A higher-order function is a function that accepts another function as an 
@@ -52,8 +51,6 @@
        *unaryFunction(10);
        *Add 10 to the given argument and display the value
 */
-
-
 /*
     Q: What is the currying function?
     A: Currying is the process of taking a function with multiple arguments and 
@@ -72,7 +69,6 @@
         /
         Note: Curried functions are great to improve code reusability and functional composition.
 */
-
 /*
   Q:What is pure function?
   A: A Pure function is a function where the return value is only determined by 
@@ -94,9 +90,7 @@
     console.log(pureAddNumber(7)(numberArray)); // returns [6, 7]
     console.log(numberArray); // returns [6]
 */
-
 /**
- * 
  * As per the above code snippets, the Push function is impure itself by altering 
  * the array and returning a push number index independent of the parameter value, 
  * whereas Concat on the other hand takes the array and concatenates it with the 
@@ -200,8 +194,6 @@ console.log(a);
     <script type="module" src="welcome-module.js"></script>;
     console.log(import.meta); // { url: "file:///home/user/welcome-module.js" }
 */
-
-
 /*
 ==> Functions in Javascript : -
     1) Normal function :- 
@@ -297,8 +289,6 @@ counter_1.displayCounter();
         return a function
     -> Examples : map, filter, forEach, sort, setTimeout , ...etc
 */
-
-
 /*
     Normal Function Vs Arrow Functions:
     ==> Normal Function: 

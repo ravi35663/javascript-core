@@ -1,9 +1,9 @@
 /*
-  In JavaScript, events are interactions or occurrences that happen in the browser, such as a user clicking 
-  a button, moving the mouse, or pressing a key. 
-  These events can be captured and handled by JavaScript code, allowing you to create interactive and 
-  dynamic web applications. Events can occur on various HTML elements like buttons, input fields, or the 
-  document itself.
+  In JavaScript, events are interactions or occurrences that happen in the browser, such as 
+  a user clicking a button, moving the mouse, or pressing a key. 
+  These events can be captured and handled by JavaScript code, allowing you to create 
+  interactive and dynamic web applications. Events can occur on various HTML elements like 
+  buttons, input fields, or the document itself.
 */
 /*
   Here are some types of examples .

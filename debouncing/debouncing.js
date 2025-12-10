@@ -1,10 +1,10 @@
 /*
-    ==> Debouncing : -
-        -> Debouncing is a technique used to delay execution after some inactivity.
-           To increase the performance of the system.
-        -> In context of searching , the API is called when user stop typing.
-        -> Debounce is also useful for scrolling web pages or in lazy loading
-        */
+==> Debouncing : -
+    ->  Debouncing is a technique used to delay execution after some inactivity.
+        To increase the performance of the system.
+    ->  In context of searching , the API is called when user stop typing.
+    ->  Debounce is also useful for scrolling web pages or in lazy loading
+*/
 let counter = 0;
 const debounce = (func,delay)=>{
     let timerId;// this used to store timeout id  

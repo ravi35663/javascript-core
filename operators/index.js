@@ -153,9 +153,9 @@ console.log(typeof a, typeof b, b); // string, number, NaN
 
 //What is a comma operator
 /*
-    The comma operator is used to evaluate each of its operands from left to right and returns the value of 
-    the last operand. This is totally different from comma usage within arrays, objects, and function 
-    arguments and parameters. 
+    The comma operator is used to evaluate each of its operands from left to right and 
+    returns the value of the last operand. This is totally different from comma usage 
+    within arrays, objects, and function arguments and parameters. 
     For example, the usage for numeric expressions would be as below,
 */
 var x = 1;
@@ -166,9 +166,11 @@ console.log(x)// 5
 
 //What is the advantage of a comma operator
 /*
-    It is normally used to include multiple expressions in a location that requires a single expression. 
-    One of the common usages of this comma operator is to supply multiple parameters in a for loop. 
-    For example, the below for loop uses multiple expressions in a single location using comma operator,
+    It is normally used to include multiple expressions in a location that requires a 
+    single expression. One of the common usages of this comma operator is to supply 
+    multiple parameters in a for loop. 
+    For example, the below for loop uses multiple expressions in a single location using 
+    comma operator,
 */
 for (var a = 0, b =10; a <= 10; a++, b--);
 

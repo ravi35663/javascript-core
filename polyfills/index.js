@@ -8,10 +8,9 @@
 
 // What is Polyfill
 /*
-    A polyfill (or polyfiller) is a piece of code (or plugin) that provides the 
+    A polyfill (or poly filler) is a piece of code (or plugin) that provides the 
     technology that we, the developers, expect the browser to provide natively.
 */
-
 //Common Browser Features Where Polyfills Are Used
 /*
     JavaScript is the language used to create a polyfill, but a polyfill can be 
@@ -43,8 +42,6 @@
     let subString = 'Hello';
     console.log(str.startsWith(subString,0));
 */
-
-
 /*
     Another example of a polyfill is for Web Storage (local storage or session storage). 
     The code for it in rough is given below:
@@ -95,8 +92,8 @@ if (typeof window.localStorage == 'undefined' || typeof window.sessionStorage ==
 
 /*
   ==> Polyfills:    
-  ->  It is a JS feature that provides a way to support the feature of new browsers to the older 
-      browsers.
+  ->  It is a JS feature that provides a way to support the feature of new browsers to the 
+      older browsers.
 */
 
 const arr = [..."123456789"]
@@ -111,7 +108,6 @@ Array.prototype.myMap = function(callback){
    }
    return new_arr;
 }
-
 
 // Polyfills for filter function
 // (Custom filter function)

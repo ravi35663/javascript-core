@@ -25,8 +25,6 @@ myFunction("Welcome") // Welcome Ravi
  function has returned.
 */
 
-
-
 /*
 ==> Closure in Javascript : -
     -> function with its lexical scope form a closure .
@@ -135,10 +133,10 @@ x();
     -> Over memory consumption.
     -> if closure does not deal properly then it causes memory leak issues.
 */
-
 /*
-    ->  A closure is the combination of a function bundled together (enclosed) with reference to its 
-        surroundings state (lexical environment ).
+    ->  A closure is the combination of a function bundled together (enclosed) with 
+        reference to its surroundings state (lexical environment ).
     ->  A closure gives you access to an outer function’s scope inner function.
-    ->  Variables created without a declaration (var, let, const) are always in the global scope even they created inside any function
+    ->  Variables created without a declaration (var, let, const) are always in the global 
+        scope even they created inside any function
 */

@@ -21,7 +21,6 @@ var obj = {
     name:"Ravi",
     email:'ravi@getnada.com'
 }
-
 /*
 4) Function constructor: 
     Create any function and apply the new operator to create object instances,

@@ -26,7 +26,6 @@
     x = 3.14; // This will cause an error because x is not declared
 */
 
-
 /*
     and if you declare inside a function, it has local scope
 
@@ -38,5 +37,3 @@
       y = 3.14; // This will cause an error
     }
 */
-
-

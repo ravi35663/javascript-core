@@ -14,7 +14,6 @@
     }
     console.log(counter); // 30 (because the variable in if block won't exist here)
 */
-
 /*
  *What is the difference between let and var
     var:-
@@ -40,7 +39,6 @@
     }
     userDetails("John");
 */
-
 /*
  *How do you redeclare variables in a switch block without an error
  -> If you try to redeclare variables in a switch block then it will cause errors 
@@ -125,10 +123,8 @@
     function message(name) {
         console.log(name);
     }
-
     This hoisting makes functions to be safely used in code before they are declared.
 */
-
 /*
 ===> Hoisting in javascript : -
     ->  undefined   ->    when value does not assigned 
@@ -146,7 +142,7 @@
 
     ->  Before starting execution of any program, memory assigned to each variable and function as 
         we saw in the execution context (Memory creation phase).
-    ->  "not defined" only happens when we have not defined memory for any variable and are  trying to 
+    ->  "not defined" only happens when we have not defined memory for any variable and are trying to 
         access it .
 
     Example 2:
@@ -156,7 +152,6 @@
             console.log(“My name is sumit”);
         }
 */
-
 /*
 ===> Let and const and temporal dead zone :-
     ->  let and const declarations are hoisted (assigning variables, function, class)

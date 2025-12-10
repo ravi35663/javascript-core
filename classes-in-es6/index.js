@@ -30,8 +30,9 @@ class Bike2{
 
 //What is a constructor method
 /*
-    The constructor method is a special method for creating and initializing an object created within a class. 
-    If you do not specify a constructor method, a default constructor is used. 
+    The constructor method is a special method for creating and initializing an object 
+    created within a class. If you do not specify a constructor method, a default 
+    constructor is used. 
     The example usage of constructor would be as below,
 */
 

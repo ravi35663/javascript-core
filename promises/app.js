@@ -22,8 +22,6 @@
         console.log("Promise is rejected with error:",err);
     }) 
 */
-
-
 // Way 2:
 /*
     let val = 20;
@@ -37,8 +35,6 @@
         console.log("Resolved:",res);
     })
 */
-
-
 //Why do you need a promise
 /*
  Promises are used to handle asynchronous operations. They provide an alternative 
@@ -125,7 +121,6 @@ Promise.race([promise1, promise2]).then(function (value) {
     console.log(value); // "two" // Both promises will resolve, but promise2 is faster
 });
 
-
 //What are the pros and cons of promises over callbacks
 /*
     Below are the list of pros and cons of promises over callbacks,
@@ -139,9 +134,7 @@ Promise.race([promise1, promise2]).then(function (value) {
     *Cons:
         -> It make little complex code.
         -> you have to write polyfill if ES6 is not supported
-
 */
-
 /*
     Promise:
     -> Until the promise is not resolve or rejected, it will be in pending state
@@ -245,21 +238,18 @@ checkAvailability('jeans').then(res=>{
         here with .all , all promises will resolved in 5sec
     -> we can also called it fail fast technique
 */
-
 /*
     Promise.allSettled([p1,p2,p3,p4])
     -> .allSettled will return a promise which have all resolved/rejected promises 
     -> everything run in parallel in .allSettled
     -> settled means either rejected or resolved
 */
-
 /*
     Promise.race([p1,p2,p3])
     -> as soon as any promise is resolved/rejected, it give you the first 
        resolved/reject promise
     -> whatever promise settled first (first win) will return first
 */
-
 /*
     Promise.any([p1,p2,p3])
     -> as soon as any promise is resolved, it give you the first 
@@ -313,7 +303,6 @@ checkAvailability('jeans').then(res=>{
                 -> User resolved
                 ->  Data is {user_data}
 */
-
 /*
     -> async/await makes promise easier to write 
     -> async function always return promise 
@@ -349,4 +338,3 @@ checkAvailability('jeans').then(res=>{
     -> If the output of a line depends on the output of another line then use await with that function .
     -> To run multiple promises in parallel , use Promise.all(<Promise array>)  
 */
-

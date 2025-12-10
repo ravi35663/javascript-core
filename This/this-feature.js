@@ -14,7 +14,8 @@ console.log("Again This is",this); // Again this is { hobbies: [ 'chess', 'crick
 
 /*
 ===> JS 'this' keyword : -
-    ->  'this' is not a variable , it is a keyword and we cannot change the value of 'this' keyword
+    ->  'this' is not a variable , it is a keyword and we cannot change the value of 
+        'this' keyword
     ->  'this' refers to an object
     ->  'this' refers to different objects where it is used .
     ->   in 'strict' mode 'this' is empty object
@@ -25,7 +26,6 @@ console.log("Again This is",this); // Again this is { hobbies: [ 'chess', 'crick
             getThis:function (){
                 console.log("This",this); // this refers to the "person" object(Both server + browser)
                 // this will show empty if you use arrow fun.
-
             },
         }
         this.name = "Amit"

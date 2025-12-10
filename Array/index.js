@@ -2,14 +2,15 @@
 ==> Array :
     ->  An array is a collection of similar or dissimilar kind of elements (heterogeneous elements).
         arr = [1,2,3,"Sumit", 1.23, {name:"Ravi"}]
-    ->  const arr = new Array(4) // it will create 4 empty blocks which will have undefined value stored.
+    ->  const arr = new Array(4) // it will create 4 empty blocks which will have undefined 
+        value stored.
         arr.length --> 4
     ->  To Check array type:
         arr = [1,"",1.9];
         arr.constructor === Array --> true
 
-        Array.isArray(arr)  --> true
-        Array.isArray(12)   --> false
+        Array.isArray(arr)  -> true
+        Array.isArray(12)   -> false
     ->  ("kks").constructor === Array ->  false
     ->  arr.length => it is variable not a function
 */

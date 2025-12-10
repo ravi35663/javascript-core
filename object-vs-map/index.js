@@ -1,10 +1,6 @@
 /*
-    How do you compare Object and Map
-*/
-/*
     Objects and maps are both dynamic collections of key-value pairs.
 */
-
 // 1. The construction is of course different
 // Object:
 const gameObj = {

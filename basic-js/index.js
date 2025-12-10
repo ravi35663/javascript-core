@@ -9,17 +9,18 @@
 
 /*
 ==> Javascript variable declaration:
-    ->  var: it is a global level variable. (e.g. life of the variable isn throughout of the program).
+    ->  var: it is a global level variable. (e.g. life of the variable isn throughout of 
+        the program).
         var name = "Ravi"
     ->  let: it is a scope/block level variable (e.g. memory deleted once the scope of the variable is ended).
         let name = "Ravi"
     ->  const: it is a scope/block level variable once it is assigned cannot be changed.
         const name = "Ravi"
 */
-
 /*
 ==> Javascript Object :
-    ->  An object is the key-value pair of the elements which is used to store some values in key - value format. 
+    ->  An object is the key-value pair of the elements which is used to store some values 
+        in key-value format. 
         e.g.
         let person = {
             name:"sumit kumar",
@@ -28,7 +29,6 @@
             occupation: "Software engineer"
         }
 */
-
 /*
 ==> Operators:
     1) Arithmetic operators:
@@ -99,7 +99,6 @@
         -> >>> (fill zeros on the right side and remove the leftmost bits  by discarding left most elements .
             e.g. 5>>>1 -> 0101>>>1 = 0010)
 */
-
 /*
 ==> Notes : -
     ->  You can check primitive data types with 'typeof' but you cannot check object types with typeof.
@@ -116,15 +115,15 @@
     —>  To delete any value from an object use the below method .
             car = {name:"tata tigor", "price": 123, model: "s3"}
             delete car.name ===> It will delete the "name" key and value from the car object
-    —>  Everything in Javascript is an object. Boolean, Number, String, Dates, Maths, RE are always an object.
-    ->  Function vs Method: if you write any function inside any Class or object it is called method 
-        otherwise it is called function.
+    —>  Everything in Javascript is an object. Boolean, Number, String, Dates, Maths, RE are 
+        always an object.
+    ->  function vs Method: if you write any function inside any Class or object it is 
+        called method otherwise it is called function.
     ->  To find datatype of the variable use "typeof()".
             let name = "sumit";    --> typeof(name) --> str
 */
-
 /*
-==> Mutation : - 
+=> Mutation : - 
     ->  Mutation means manipulating data type (or values) with its original values.
     —>  Immutable values means once created cannot be changed. (Primitive data type )
     —>  let person = {
@@ -136,15 +135,14 @@
     -> *Primitive data types are immutables.
 Note : - Here we can change the value of the object hence it is mutable .
 */
-
 /*
-==> Deep Cloning : -
-    ->  If we create an object (any object like array or composite data type) and assign each attribute of 
-        the previous object to a newly created object then changes made in any of the objects won’t affect 
-        any other object. That is known as deep cloning .
+=> Deep Cloning : -
+    ->  If we create an object (any object like array or composite data type) and assign 
+        each attribute of the previous object to a newly created object then changes made 
+        in any of the objects won’t affect any other object. That is known as deep cloning .
         e.g. 
         let  original ={
-            name:”sumit”,
+            name:"Sumit",
             age:25
         }
     -> let duplicate = original  (// Shallow copying)
@@ -158,8 +156,8 @@ Note : - Here we can change the value of the object hence it is mutable .
         -> this is known as deep cloning or deep copying this is the first level of deep cloning.
         
         #Method - 2:
-        let duplicate_1 = Object.assign({},original) // this is also deep cloning this is also the first 
-        level of deep cloning.
+        let duplicate_1 = Object.assign({},original) // this is also deep cloning this is 
+        also the first level of deep cloning.
     
         #Method - 3:
         let duplicate_2 = JSON.parse(JSON(stringify(original))); // this is perfect deep cloning.

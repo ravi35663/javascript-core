@@ -1,7 +1,8 @@
 /*
 ==> Execution Context:
     ->  Everything in javascript happens inside an “Execution Context”:
-    ->  Execution context is a block where memory created for the variable and code available for the execution.
+    ->  Execution context is a block where memory created for the variable and code
+        available for the execution.
     ->  when javascript program is run an execution context is created:
     ->  Inside that execution context two thing are available:
         Execution Context:
@@ -11,12 +12,13 @@
                 ->  Execution of the code happens here (One-Line-At-A-Time)
     
     ->  Javascript is a synchronous single threaded language.
-    ->  When Javascript is run, initially memory is assigned to all the variables and functions. 
-        That phase is known as memory creation phase or creation phase.
-    ->  When function is called (square(10)) an execution context for that function is created and 
-        that function pushed into the stack for the execution.
-    ->  Once the program/function return something then execution context of that program/function 
-        will be deleted and that program/function popped out from the stack.
+    ->  When Javascript is run, initially memory is assigned to all the variables and 
+        functions. that phase is known as memory creation phase or creation phase.
+    ->  When function is called (square(10)) an execution context for that function is 
+        created and that function pushed into the stack for the execution.
+    ->  Once the program/function return something then execution context of that 
+        program/function will be deleted and that program/function popped out from the 
+        stack.
 */
 
 // Consider one-example for better understanding:
@@ -61,12 +63,12 @@ var sq2 = square(20);
 /*
 Note:
     ->  When the work is done, the execution context is deleted from that function/program.
-    ->  For each function call an execution context is created and when the function call is done, 
-        the execution context will be deleted.
+    ->  For each function call an execution context is created and when the function call is 
+        done, the execution context will be deleted.
     ->  Any program that starts to run, a global execution context is created.
-    ->  When any function is called inside the program then that function pushed into the execution 
-        context and when the work of that program is done it pops out from the execution context. 
-        It follows LIFO (Last in first out)
+    ->  When any function is called inside the program then that function pushed into the 
+        execution context and when the work of that program is done it pops out from the 
+        execution context. It follows LIFO (Last in first out)
     ->  Call stack maintains the order of execution of the execution context.
 */
 /*
@@ -78,7 +80,6 @@ Note:
     4)  Runtime Stack
     5)  Machine Stack
 */
-
 /*
 Notes:    
     ==> Single thread Meaning :- 
@@ -101,10 +102,9 @@ Notes:
     ->  Lexical environment is local memory along with lexical environment of its parents 
     ->  i.e. it keeps the variables and functions of its parents.
 */
-
 /*
 Note:
-===> Scope chain and Lexical environment : -
+==> Scope chain and Lexical environment : -
     ->  Global variables are accessible anywhere in the program.
     ->  lexical environment is local memory along with its parent lexical environment.
     ->  i.e 
@@ -122,10 +122,9 @@ Note:
 
 /*
 ==> Garbage Collector : -
-    ->  Whenever unused memory is found in the JS Program, the JS Engine will remove that memory by 
-        the garbage collector.
+    ->  Whenever unused memory is found in the JS Program, the JS Engine will remove that 
+        memory by the garbage collector.
 */
-
 /*
 ==> JS Supports multi-paradigm programming language that support:
     -> Functional programming
@@ -133,7 +132,6 @@ Note:
     -> Procedural Programming
     -> Prototypal programming
 */
-
 /*
 ===> “Use Strict” (Strict mode): 
     ->  ‘use strict’ -> define that the JS code will be executed in strict mode .
@@ -151,7 +149,6 @@ Note:
     ->  Deleting a function is not allowed 
     ->  Duplicating a parameter is not allowed.
 */
-
 /*
 ===> Advantages of JS:
     ->  Regardless of where you host javascript code on the client side, it always executes on the client 
@@ -160,8 +157,6 @@ Note:
     ->  Javascript is dynamic or weak typed language. 
     ->  Both frontend and backend can be designed in JS.
 */
-
-
 /*
 ==> require:
     ->  require is used in node.js and follows the commonJs module system. 
@@ -171,7 +166,6 @@ Note:
             const fs = require(“fs”);
             const myModule = require(“./myModule”);
 */
-
 /*
 ==> import:
     -> import is used in the modern javascript environment (ECMAScript).
@@ -182,16 +176,13 @@ Note:
             import file from “myfile”
             import fs from ‘fs’
 */
-
 /*
 ==> null Vs undefined: -
     -> "null" represents the intentional absence of any object value. While,  
     -> "undefined" represents a variable that has been declared but has not been assigned a value.
 */
-
-
 /*
-===> Predefined JS functions:-
+==> Predefined JS functions:-
     -> parseInt(string,radix/base) :- parseInt always returns an integer value of string or NaN.
         const decimal = parseInt(“10”) -> 10
         const decimal2 = parseInt(“10”,10) -> explicitly parse as 10
