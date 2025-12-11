@@ -9,11 +9,13 @@
 
 /*
 ==> Javascript variable declaration:
-    ->  var: it is a global level variable. (e.g. life of the variable isn throughout of 
+    ->  var: it is a global level variable. (e.g. life of the variable is throughout of 
         the program).
         var name = "Ravi"
+
     ->  let: it is a scope/block level variable (e.g. memory deleted once the scope of the variable is ended).
         let name = "Ravi"
+
     ->  const: it is a scope/block level variable once it is assigned cannot be changed.
         const name = "Ravi"
 */
@@ -32,9 +34,25 @@
 /*
 ==> Operators:
     1) Arithmetic operators:
-        ->  '+' | '-' | '*' | '/' | '%' (Modulus operator) | '++' (Increment operator) | '--' (decrement operator)
+        Operator	    Name	        Example Code	    Output
+            +	        Addition	        5 + 3	            8
+            -	        Subtraction	        10 - 4	            6
+            *	        Multiplication	    6 * 2	            12
+            /	        Division	        20 / 5	            4
+            %	        Modulus         	10 % 3	            1
+            ++	        Increment	        let x = 5; x++;	    x = 6
+            --	        Decrement	        let y = 7; y--;	    y = 6
+
     2) JS Comparison / Relational Operators: 
-        -> == | === (Check both type and value) | !== |  > | >= | < | <= 
+        Operator	Meaning	                                    Example Code	Result
+        ==	        Equal (checks value only)	                5 == "5"	    true
+        ===	        Strict Equal (checks value + type)	        5 === "5"	    false
+        !==	        Strict Not Equal (checks value + type)	    5 !== 5	        false
+        >	        Greater Than	                            10 > 6	        true
+        >=	        Greater Than or Equal	                    10 >= 10	    true
+        <	        Less Than	                                3 < 8	        true
+        <=	        Less Than or Equal	                        5 <= 2	        false
+
     3) Logical Operators:
         -> '&&' (Logical AND) | '||' (Logical OR) | '!' (Logical NOT)
 
@@ -101,9 +119,10 @@
 */
 /*
 ==> Notes : -
-    ->  You can check primitive data types with 'typeof' but you cannot check object types with typeof.
+    ->  You can check primitive data types with 'typeof' but you cannot check object types 
+        with typeof.
     ->  'typeof' only returns number, string, null, boolean, undefined, object and functions.
-->      To check any data types you can use: 'variable.constructor === Data_type'
+    ->  To check any data types you can use: 'variable.constructor === Data_type'
     ->  e.g.    ([1]).constructor       => Array  
                 ("name").constructor    => String
                 (10).constructor        => Number
@@ -111,12 +130,13 @@
     —>  Number, String and Boolean are primitive data types in JS
     —>  null and undefined are trivial(less to primitive, less important) data types.
     —>  Objects and array are composite data types
-    —>  In JS switch-case you can take string, boolean and integer or you can use primary DT.
+    —>  In JS switch-case you can take string, boolean and integer or you can use primary 
+        datatypes.
     —>  To delete any value from an object use the below method .
             car = {name:"tata tigor", "price": 123, model: "s3"}
             delete car.name ===> It will delete the "name" key and value from the car object
-    —>  Everything in Javascript is an object. Boolean, Number, String, Dates, Maths, RE are 
-        always an object.
+    —>  Everything in Javascript is an object. Boolean, Number, String, Dates, Maths, 
+        RE are always an object.
     ->  function vs Method: if you write any function inside any Class or object it is 
         called method otherwise it is called function.
     ->  To find datatype of the variable use "typeof()".

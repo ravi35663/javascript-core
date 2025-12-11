@@ -34,8 +34,8 @@ var sq2 = square(20);
 /*
     Execute above program line-by-line:
     1) Initial phase of main program:
-        In the first phase memory part is run and whoever variable declare by var, js assigned undefined 
-        to them.
+        In the first phase memory part is run and whoever variable declare by var, 
+        js assigned undefined to them.
         Memory Phase:                                Code Phase:
             n: undefined (ini.phase)  
             square: function {..} (ini.phase) 
@@ -62,9 +62,9 @@ var sq2 = square(20);
 
 /*
 Note:
-    ->  When the work is done, the execution context is deleted from that function/program.
-    ->  For each function call an execution context is created and when the function call is 
-        done, the execution context will be deleted.
+    ->  When the work is done, the execution context is deleted for that function/program.
+    ->  For each function call an execution context is created and when the function call 
+        is done, the execution context will be deleted.
     ->  Any program that starts to run, a global execution context is created.
     ->  When any function is called inside the program then that function pushed into the 
         execution context and when the work of that program is done it pops out from the 
@@ -82,11 +82,11 @@ Note:
 */
 /*
 Notes:    
-    ==> Single thread Meaning :- 
+    -> Single thread Meaning :- 
         -> run one command at a time
         -> first line executed then it go to next line
-    ->  Empty file is a smallest or shortest javascript file. Because a global execution context is created 
-        and reserved memory for that context if you run the program.
+    ->  Empty file is a smallest or shortest javascript file. Because a global execution 
+        context is created and reserved memory for that context if you run the program.
     ->  Lots of variables and functions are created by-default by JS-Engine.
     ->  At the global level ‘this’ === ‘window’ (On browser)
     ->  anything not inside a function is in a global space.
@@ -115,8 +115,8 @@ Note:
     }
     ->  lexical means -> sequence or hierarchy 
     ->  here x is lexically sitting inside a function
-    ->  way of finding variables from one local scope to another (parent) then global scope is known 
-        as scope chaining .
+    ->  way of finding variables from one local scope to another (parent) then global 
+        scope is known as scope chaining .
     ->  lexical == sequence == hierarchy .
 */
 
@@ -148,44 +148,4 @@ Note:
             delete x; --> Cause a error
     ->  Deleting a function is not allowed 
     ->  Duplicating a parameter is not allowed.
-*/
-/*
-===> Advantages of JS:
-    ->  Regardless of where you host javascript code on the client side, it always executes on the client 
-        side and reduces a lot of bandwidth and makes execution very fast.
-    ->  Javascript is cross-platform language.
-    ->  Javascript is dynamic or weak typed language. 
-    ->  Both frontend and backend can be designed in JS.
-*/
-/*
-==> require:
-    ->  require is used in node.js and follows the commonJs module system. 
-    ->  require is used to import modules.
-    ->  require is synchronous. It blocks lines of code for execution.
-    ->	e.g.
-            const fs = require(“fs”);
-            const myModule = require(“./myModule”);
-*/
-/*
-==> import:
-    -> import is used in the modern javascript environment (ECMAScript).
-    -> import supported by browser and also used in some nodeJs versions.
-    -> import is also used for importing modules in javascript.
-    -> import is asynchronous. E.g it won’t block any line of code.
-    ->	e.g.
-            import file from “myfile”
-            import fs from ‘fs’
-*/
-/*
-==> null Vs undefined: -
-    -> "null" represents the intentional absence of any object value. While,  
-    -> "undefined" represents a variable that has been declared but has not been assigned a value.
-*/
-/*
-==> Predefined JS functions:-
-    -> parseInt(string,radix/base) :- parseInt always returns an integer value of string or NaN.
-        const decimal = parseInt(“10”) -> 10
-        const decimal2 = parseInt(“10”,10) -> explicitly parse as 10
-        const binary = parseInt(“1010”,2) -> 10, parse as Binary (2)
-        const hex = parseInt(“1A”,16) -> parse on base 16 value would be 26.
 */
