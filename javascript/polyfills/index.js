@@ -126,9 +126,9 @@ const myMapResult = arr.myMap((item)=>{
    return Number(item);
 })
 
-
 const myFilterResult = myMapResult.myFilter((item)=>{
    return item % 2 === 0;
 })
+
 console.log("My mapped result is ",myMapResult);
 console.log("My filtered result ",myFilterResult);
