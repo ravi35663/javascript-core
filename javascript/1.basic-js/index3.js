@@ -25,14 +25,15 @@ console.log("Value of a and b ",a,b); // 100, 500
     ->  Example .
         var a=100;
         {
-            var a = 10; // Shadow of “a” & “this” is known as shadowing & it kept the reference of a (above the block)
+            var a = 10; // Shadow of “a” & “this” is known as shadowing & it kept the 
+                        // reference of a (above the block)
             var b = 10
             const c = 11
             console.log(“Value of a”,a); ==> 10;
         }
         console.log(“Value of b”,b); // 10;
 	    console.log(“Value of a outside the scope”,a); 10;
-    ->  Wherever any variable declared with var , it will be in global scope memory 
+    ->  Wherever any variable declared with var, it will be in global scope memory 
         irrespective of scope.
 
 ==> There is three type of scopes 
@@ -89,14 +90,11 @@ console.log("Value of a and b ",a,b); // 100, 500
         const binary = parseInt(“1010”,2) -> 10, parse as Binary (2)
         const hex = parseInt(“1A”,16) -> parse on base 16 value would be 26.
 */
-
-
 // What is the difference between == and === operators
 /**
  * JavaScript provides both strict(===, !==) and type-converting(==, !=) equality comparison. 
- 
- * 1) Two strings are strictly equal when they have the same sequence of characters, same length, and 
- *    same characters in corresponding positions.
+    1) Two strings are strictly equal when they have the same sequence of characters, 
+       same length and same characters in corresponding positions.
 
  * 2) Two numbers are strictly equal when they are numerically equal. 
  *    i.e, Having the same number value. There are two special cases in this,

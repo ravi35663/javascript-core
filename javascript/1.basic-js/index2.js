@@ -6,7 +6,7 @@
     ->  when javascript program is run an execution context is created:
     ->  Inside that execution context two thing are available:
         Execution Context:
-            1) Memory component / Variable Env.:
+            1) Memory component/Variable Env.:
                 ->  All the variable and functions are stored here (consume memory)
             2) Code Comp. / Thread of Execution:
                 ->  Execution of the code happens here (One-Line-At-A-Time)
@@ -20,7 +20,6 @@
         program/function will be deleted and that program/function popped out from the 
         stack.
 */
-
 // Consider one-example for better understanding:
 var n = 10
 function square(num){
@@ -119,7 +118,6 @@ Note:
         scope is known as scope chaining .
     ->  lexical == sequence == hierarchy .
 */
-
 /*
 ==> Garbage Collector : -
     ->  Whenever unused memory is found in the JS Program, the JS Engine will remove that 
@@ -133,16 +131,16 @@ Note:
     -> Prototypal programming
 */
 /*
-===> “Use Strict” (Strict mode): 
-    ->  ‘use strict’ -> define that the JS code will be executed in strict mode .
+==> “Use Strict” (Strict mode): 
+    ->  ‘use strict’ -> define that the JS code will be executed in strict mode.
     ->  With ‘use strict’ you cannot use undefined variables in the scripts.
     ->  Examples : 
             a = 10;
             console.log(“A”,a); // It gives you an error.
-    ->  We can use ‘use strict’ in any function , class or any block
+    ->  We can use ‘use strict’ in any function, class or any block
     ->  We use ‘use strict’ mode to write secure JS code
     ->  To improve code quality (less error and warnings)
-    ->  Deleting a variable in not allowed in ‘strict mode’
+    ->  Deleting a variable is not allowed in ‘strict mode’
         e.g. ‘strict mode’ 
             let x = 10;
             delete x; --> Cause a error

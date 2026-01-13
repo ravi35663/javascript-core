@@ -6,23 +6,23 @@
     -> null :       Intensional absence of the data.
     -> undefined:   Memory block is assigned but there is no value available.
 */
-
 /*
 ==> Javascript variable declaration:
-    ->  var: it is a global level variable. (e.g. life of the variable is throughout of 
-        the program).
-        var name = "Ravi"
+    ->  var: it is a global level variable. 
+        ->  e.g. life of the variable is throughout of the program.
+            var name = "Ravi"
 
-    ->  let: it is a scope/block level variable (e.g. memory deleted once the scope of the variable is ended).
-        let name = "Ravi"
+    ->  let: it is a scope/block level variable 
+        ->  e.g. memory deleted once the scope of the variable is ended.
+            let name = "Ravi"
 
     ->  const: it is a scope/block level variable once it is assigned cannot be changed.
         const name = "Ravi"
 */
 /*
 ==> Javascript Object :
-    ->  An object is the key-value pair of the elements which is used to store some values 
-        in key-value format. 
+    ->  An object is the key-value pair of the elements which is used to store some 
+        values in key-value format. 
         e.g.
         let person = {
             name:"sumit kumar",
@@ -165,19 +165,19 @@ Note : - Here we can change the value of the object hence it is mutable .
             name:"Sumit",
             age:25
         }
-    -> let duplicate = original  (// Shallow copying)
-        Here both “original” and “duplicate” objects have the same address and it is known as shallow 
-        copying. And in this case if we make any changes to any of the objects either 'original' or 
-        'duplicate', it affects other objects ('original' or 'duplicate') as well .
+    -> let duplicate = original //This is reference assignment (also called shared reference).
+        Here both “original” and “duplicate” objects have the same address.
+        And in this case if we make any changes to any of the objects either 'original' 
+        or 'duplicate', it affects other objects ('original' or 'duplicate') as well.
 
     -> Deep cloning or copying  
         # Method-1
         let duplicate = {...original} 
-        -> this is known as deep cloning or deep copying this is the first level of deep cloning.
+        -> this is known as shallow copying this is the first level of cloning.
         
         #Method - 2:
-        let duplicate_1 = Object.assign({},original) // this is also deep cloning this is 
-        also the first level of deep cloning.
+        let duplicate_1 = Object.assign({},original) // this is also shallow cloning this is 
+        also the first level of cloning.
     
         #Method - 3:
         let duplicate_2 = JSON.parse(JSON(stringify(original))); // this is perfect deep cloning.
