@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning About Event</title>
+</head>
+<body>
+
+  <!-- Button element used to trigger click events -->
+  <button id="btn">Click me</button>
+
+  <!-- Why script tag is placed at the bottom of body?
+    - Browser loads HTML and builds DOM from top to bottom.
+    - If JS runs before DOM is ready, elements may not exist yet.
+    - Placing script at the bottom ensures DOM and CSSOM are loaded.
+    - This avoids errors and improves page load performance.
+  -->
+  <script src="./event.js"></script>
+
+</body>
+</html>

@@ -1,124 +1,158 @@
-//What is the purpose of void 0
 /*
-    void(0) is used to prevent the page from refreshing. This will be helpful to eliminate the unwanted 
-    side-effect, because it will return the undefined primitive value. 
-    It is commonly used for HTML documents that use href="javascript:void(0);" within an <a> element. 
-    
-    i.e, when you click a link, the browser loads a new page or refreshes the same page. 
-    But this behavior will be prevented using this expression. 
-   
-    For example, the below link notify the message without reloading the page
-    <a href="javascript:void(0)" onclick="alert("Well done!")">Click Me</a>
-*/
-/*
-    Interpret : to explain or understand the meaning of something
-*/
-//Is JavaScript a compiled or interpreted  language
-/*
-    ->  JavaScript is an interpreted language, not a compiled language. An interpreter in 
-        the browser reads over the JavaScript code, interprets each line, and runs it. 
-    ->  Nowadays modern browsers use a technology known as Just-In-Time (JIT) compilation, which compiles 
-        JavaScript to executable bytecode just as it is about to run.
-*/
+Purpose of void(0):
+- void(0) returns undefined.
+- Used in href="javascript:void(0)" to prevent page reload while executing JS.
+- Example:
+    <a href="javascript:void(0)" onclick="alert('Well done!')">Click Me</a>
 
-//What are events
-/*
-    ->  Events are "things" or "some action" that happen to HTML elements. 
-    ->  When JavaScript is used in HTML pages, JavaScript can react on these events. 
-    ->  Some of the examples of HTML events are,
-            1) Web page has finished loading
-            2) Input field was changed
-            3) Button was clicked
-        ...etc
-        Let's describe the behavior of click event for button element,
+Interpret:
+- Interpret means to explain or understand the meaning of something.
 
-    <!doctype html>
-    <html>
-    <head>
-        <script>
-            function greeting() {
-                alert('Hello! Good morning');
-            }
-        </script>
-    </head>
-    <body>
-        <button type="button" onclick="greeting()">Click me</button>
-    </body>
-    </html>
+Is JavaScript compiled or interpreted?
+- JavaScript is an interpreted language.
+- Modern browsers use Just-In-Time (JIT) compilation.
+- JS code is interpreted first, then optimized at runtime.
 
-*/
+What are Events?
+- Events are actions that occur on HTML elements.
+- JavaScript reacts to these events.
+- Examples: page load, input change, button click.
+- Example:
+    <button onclick="greeting()">Click me</button>
+    <script>
+      function greeting() {
+        alert('Hello! Good morning');
+      }
+    </script>
 
-//What is the use of preventDefault method
-/*
-    ->  The preventDefault() method cancels the event if it is cancelable, meaning that 
-        the default action or behavior that belongs to the event will not occur. 
-
-    ->  For example, prevent form submission when clicking on submit button and prevent 
-        opening the page URL when clicking on hyperlink are some common use cases.
-    
-    *document.getElementById("link").addEventListener("click", function (event) {
-        event.preventDefault();
+preventDefault():
+- Stops the default browser behavior of an event.
+- Common uses: preventing form submit or link navigation.
+- Example:
+    document.getElementById("link").addEventListener("click", function (event) {
+      event.preventDefault();
     });
+- Note: Not all events are cancelable.
 
-==> Note: **Remember that not all events are cancelable.
-*/
+stopPropagation():
+- Stops the event from bubbling up the DOM.
+- Example:
+    <div onclick="secondFunc()">
+      DIV 2
+      <div onclick="firstFunc(event)">DIV 1</div>
+    </div>
 
-//What is the use of stopPropagation method
-/*
-    ->  The stopPropagation method is used to stop the event from bubbling up the event 
-        chain. 
-    ->  For Example: 
-            The below nested 'divs' with stopPropagation method prevents default event 
-            propagation when clicking on nested div(Div1).
+    <script>
+      function firstFunc(event) {
+        alert("DIV 1");
+        event.stopPropagation();
+      }
+      function secondFunc() {
+        alert("DIV 2");
+      }
+    </script>
 
-            <p>Click DIV1 Element</p>
-            <div onclick="secondFunc()">
-                DIV 2
-                <div onclick="firstFunc(event)"> DIV 1 </div>
-            </div>
-            <script>
-                function firstFunc(event) {
-                    alert("DIV 1");
-                    event.stopPropagation();
-                }
+BOM (Browser Object Model):
+- Allows JavaScript to interact with the browser.
+- Includes window, navigator, history, screen, location, and document.
+- Not standardized and may vary by browser.
 
-                function secondFunc() {
-                    alert("DIV 2");
-                }
-            </script>
-*/
-
-//What is BOM:
-/*
-    ->  The Browser Object Model (BOM) allows JavaScript to "talk to" the browser. 
-    ->  It consists of the objects navigator, history, screen, location and document which are children of 
-        the window. 
-    ->  The Browser Object Model is not standardized and can change based on different 
-        browsers.Window:
-            -> DOM (document)
-            -> BOM (Iframes, screen, history, location, ...etc)
-            -> Javascript (Object, Array, functions,  ...etc)
-*/
-
-/*
-==> setTimeout, setInterval, clearInterval, clearTimeout:
-
-    setTimeout – Runs a function once after a delay
+setTimeout:
+- Runs a function once after a delay.
+- Example:
     setTimeout(() => {
-    console.log("Runs after 2 seconds");
+      console.log("Runs after 2 seconds");
     }, 2000);
 
-    setInterval – Runs a function repeatedly at fixed time intervals
+setInterval:
+- Runs a function repeatedly at fixed intervals.
+- Example:
     setInterval(() => {
-    console.log("Runs every 2 seconds");
+      console.log("Runs every 2 seconds");
     }, 2000);
 
-    clearTimeout – Cancels a timeout created by setTimeout
+clearTimeout:
+- Cancels a timeout.
+- Example:
     let id = setTimeout(() => console.log("Hi"), 3000);
-    clearTimeout(id);   // cancels the above timeout
+    clearTimeout(id);
 
-    clearInterval – Cancels an interval created by setInterval
+clearInterval:
+- Cancels an interval.
+- Example:
     let id = setInterval(() => console.log("Hello"), 3000);
-    clearInterval(id);  // stops repeated execution
+    clearInterval(id);
+*/
 
+/*
+Redirect to a new page:
+- Uses window.location.href to navigate to another URL.
+- Example:
+    function redirect() {
+      window.location.href = "newPage.html";
+    }
+
+Get current URL:
+- Use window.location.href to get the full current URL.
+
+Location object URL properties:
+- Used to access different parts of the URL.
+- Example URL:
+    https://www.example.com:8080/path/to/resource?query=example#section
+- Properties:
+    href      → full URL
+    protocol  → https
+    host      → www.example.com:8080
+    hostname  → www.example.com
+    port      → 8080
+    pathname  → /path/to/resource
+    search    → ?query=example
+    hash      → #section
+
+Get query string values:
+- Use URLSearchParams to read query parameters.
+- Example:
+    const urlParams = new URLSearchParams(window.location.search);
+    const clientCode = urlParams.get("clientCode");
+
+Display current date:
+- Use Date object and format values.
+- Example:
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, "0");
+    var mm = String(today.getMonth() + 1).padStart(2, "0");
+    var yyyy = today.getFullYear();
+    today = mm + "/" + dd + "/" + yyyy;
+    document.write(today);
+
+Compare two dates:
+- Use getTime() instead of comparison operators.
+- Example:
+    var d1 = new Date();
+    var d2 = new Date(d1);
+    console.log(d1.getTime() === d2.getTime()); // true
+    console.log(d1 === d2); // false
+
+Check if string starts with another string:
+- Use startsWith() method.
+- Example:
+    "Good morning".startsWith("Good");     // true
+    "Good morning".startsWith("morning"); // false
+
+Trim a string:
+- Removes whitespace from start and end.
+- Example:
+    let word = "    hello World.          ";
+    console.log(word.trim()); // hello World.
+
+!-- notation:
+- Not a special operator.
+- Combination of logical NOT (!) and decrement (--).
+- Value is decremented first, then evaluated for truthy/falsy.
+
+Assign default values:
+- Use logical OR (||) to assign fallback values.
+- Example:
+    var a = b || c;
+- If b is falsy, a gets c; otherwise a gets b.
 */
