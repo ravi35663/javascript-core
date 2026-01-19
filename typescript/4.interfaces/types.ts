@@ -1,36 +1,41 @@
-/*
-=> Types Aliases:
-    ->  Type aliases in TypeScript allow you to create a new name for an existing type. 
-        They are useful for improving code readability, managing complex types, and making 
-        it easier to change type definitions.
-*/
-/*
-=> Uses of Type Aliases:
-1)  Simplifying Complex Types: 
-    You can create a type alias for complex types like objects or unions, making them 
-    easier to reference.
+/* ===================== TYPE ALIASES (TypeScript) =====================
+=> What is a Type Alias:
+    - Type aliases allow you to create a new name for an existing type
+    - Useful for readability, reusability, and managing complex types
+    - Makes it easier to update type definitions in one place
 
-2)  Improving Readability: 
-    By giving a meaningful name to a type, you make your code more understandable.
 
-3)  Reusability: 
-    Type aliases can be reused across different parts of your application, promoting 
-    DRY (Don't Repeat Yourself) principles.
-*/
+==> Uses of Type Aliases:
+1) Simplifying Complex Types
+   - Helpful for object types, unions, and combinations
 
-// Define a type alias for a complex object type:
+2) Improving Readability
+   - Meaningful names make code easier to understand
+
+3) Reusability
+   - Same type can be reused across the application
+   - Promotes DRY principles
+
+
+/* ===================== EXAMPLES ===================== */
+// Type alias for a complex object
 type User = {
-    id:number | string;
+    id: number | string;
     name: string;
     email: string;
-}
+};
 
-// define a type for a union type
-type Status = 'active' | 'inactive' | 'blocked'
+// Type alias for a union type
+type Status = "active" | "inactive" | "blocked";
 
-// Function that accepts both User and Status:
-function updateUserAndStatus(user: User,status:Status){
+// Function using type aliases
+function updateUserAndStatus(user: User, status: Status): void {
     console.log(`User ${user.name} is now ${status}`);
 }
-const user:User = {id:1,name:'ravi',email:'ravi@getnada.com'};
-const updated_user = updateUserAndStatus(user, 'active');
+
+const user: User = {
+    id: 1,
+    name: "ravi",
+    email: "ravi@getnada.com",
+};
+updateUserAndStatus(user, "active");

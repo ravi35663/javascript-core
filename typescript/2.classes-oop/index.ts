@@ -1,85 +1,91 @@
-/* 
-===> Classes and Constructors in TypeScript: 
-    ->  Classes in TypeScript are a blueprint for creating objects. They can contain 
-        properties and methods to define the behavior of the objects. 
-        
-    ->  The constructor is a special method that gets called when an object is created 
-        from the class. It’s typically used to initialize object properties.
+/* ===================== CLASSES & CONSTRUCTORS (TypeScript) =====================
+=> Classes:
+    - A class is a blueprint for creating objects
+    - It defines properties (data) and methods (behavior)
+
+=> Constructor:
+    - Special method called when an object is created
+    - Used to initialize class properties
 */
 
-class Person{
-    name:string;
-    age:number;
+class Person {
+    name: string;
+    age: number;
 
-    constructor(name:string,age:number){
+    constructor(name: string, age: number) {
+        // Initializes object properties
         this.name = name;
         this.age = age;
     }
 
-    // method to returns the greetings message 
-    greet(){
+    // Method that returns a greeting message
+    greet() {
         return `Hello My name is ${this.name} and my age is ${this.age}`;
     }
 }
 
-const person = new Person("Ravi",27)
-person.greet();
-/*
-==> Access Modifiers in typescripts:
-    ->  The access modifiers in typescript is used to defined how class members (methods and properties) 
-        can be accessed and modified.
-    ->  There are 4 access modifiers in typescript which are 'public', 'private', 'protected' and 
-        'readonly'.
+const person = new Person("Ravi", 27);
+person.greet(); // "Hello My name is Ravi and my age is 27"
 
-    => Public(default): 
-        -> Accessible anywhere (inside and outside the class).
-        -> All members are public by default if no modifier is specified.
-
-    => private:
-        ->  Only accessible within the class itself. Not accessible outside of the class or from 
-            subclasses.
-
-    => protected:
-        -> Accessible within the class and its subclasses. Not accessible outside of these.
-
-    => readonly:
-        ->  Marks a property as read-only. It can only be assigned a value during initialization 
-            (either in a constructor or when declared), and cannot be changed afterward.
+/* ===================== ACCESS MODIFIERS =====================
+- Access modifiers control how class members are accessed
+- TypeScript provides:
+  1) public
+  2) private
+  3) protected
+  4) readonly
 */
+class Employee {
+    public name: string;            // Accessible everywhere
+    private salary: number;         // Accessible only inside this class
+    protected department: string;   // Accessible in class & subclasses
+    readonly id: number;            // Assigned once, cannot be changed
 
-class Employee{
-    public name:string;             // Can be accessed and modified anywhere
-    private salary: number;         // Only accessible within this class
-    protected department: string;   // Accessible within this class and subclasses
-    readonly id: number             // Can only be assigned once, cannot be changed
-
-    constructor(name:string,salary:number,department: string,id:number){
-        this.name = name
+    constructor(name: string, salary: number, department: string, id: number) {
+        this.name = name;
         this.salary = salary;
-        this.id = id;       // Can only be set here or at declaration
         this.department = department;
+        this.id = id; // readonly → can be set only here or at declaration
     }
 
-    // Method to get the private properties:
-    getSalary():number{
+    // Public method to access private property
+    getSalary(): number {
         return this.salary;
     }
 }
-
-class Manager extends Employee{
-    constructor(name:string,salary:number,department:string,id:number){
-        super(name,salary,department,id);
+class Manager extends Employee {
+    constructor(name: string, salary: number, department: string, id: number) {
+        super(name, salary, department, id);
     }
 
-    getDepartment():string{
-        return this.department; // accessible due to protected
+    getDepartment(): string {
+        // Allowed because department is protected
+        return this.department;
     }
 }
+const emp = new Employee("John", 50000, "HR", 101);
+console.log(emp.name);        // ✅ public → accessible
+console.log(emp.getSalary()); // ✅ access private via method
 
-const emp = new Employee('John', 50000, 'HR', 101);
-console.log(emp.name);           // Public, so accessible
-console.log(emp.getSalary());    // Can access private data via method
+// emp.salary ❌ Error (private)
+// emp.id = 102 ❌ Error (readonly)
 
-// emp.salary is not accessible directly because it is private
-// emp.id = 102; // Error: Cannot assign to 'id' because it is a read-only property
-  
+/* ===================== SUMMARY =====================
+Class:
+    - Blueprint for objects
+
+    Constructor:
+    - Initializes object properties
+
+    public:
+    - Accessible everywhere
+
+    private:
+    - Accessible only inside the class
+
+    protected:
+    - Accessible in class and subclasses
+
+    readonly:
+    - Value cannot be changed after initialization
+*/

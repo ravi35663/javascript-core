@@ -1,68 +1,77 @@
-/*
-    class with single interface:
+/* ===================== CLASSES WITH INTERFACES (TypeScript) =====================
+===> Class with Single Interface:
+    - An interface defines a contract (properties + method signatures)
+    - A class that implements an interface must implement all its members
+    - Interfaces contain no implementation, only structure
 */
+
 // Defining an interface
 interface AnimalInterface {
     name: string;
     age: number;
-  
-    // Method signature: no implementation
+
+    // Method signature (no implementation)
     makeSound(): void;
 }
-  
+
 // Class implementing the interface
 class DogClass implements AnimalInterface {
     name: string;
     age: number;
-  
+
     constructor(name: string, age: number) {
-      this.name = name;
-      this.age = age;
+        this.name = name;
+        this.age = age;
     }
-  
-    // Implementing the interface method
+
+    // Mandatory implementation of interface method
     makeSound(): void {
-      console.log("Bark!");
+        console.log("Bark!");
     }
 }
-  
-  // Creating an instance
-  const myDog = new DogClass('Buddy', 3);
-  console.log(myDog.name); // Output: Buddy
-  myDog.makeSound();       // Output: Bark!
-  
-/*
-    class with multiple interfaces:
+
+// Creating an instance
+const myDog = new DogClass("Buddy", 3);
+console.log(myDog.name); // Buddy
+myDog.makeSound();      // Bark!
+
+/* ===================== CLASS WITH MULTIPLE INTERFACES =====================
+    - TypeScript allows a class to implement multiple interfaces
+    - This helps combine different behaviors into one class
 */
 
 // Interface for flying behavior
 interface CanFly {
     fly(): void;
 }
-  
+
 // Interface for swimming behavior
 interface CanSwim {
     swim(): void;
 }
 
-class Bird implements CanFly,CanSwim{
-    swim(): void {
-        console.log("Bird cannot swim")
-    }
+// Class implementing multiple interfaces
+class Bird implements CanFly, CanSwim {
     fly(): void {
-        console.log("Bird can fly")
+        console.log("Bird can fly");
+    }
+
+    swim(): void {
+        console.log("Bird cannot swim");
     }
 }
 
 const b1 = new Bird();
-b1.fly();
-b1.swim()
+b1.fly();   // Bird can fly
+b1.swim();  // Bird cannot swim
 
-/*
-Key Benefits:
-    1)  Separation of concerns: Different functionalities can be defined in different 
-        interfaces, and classes can combine them as needed.
-    2)  Flexibility: A class can implement multiple interfaces, allowing for more complex 
-        behavior.
+/* ===================== KEY BENEFITS =====================
+1) Separation of Concerns
+   - Different behaviors are defined in separate interfaces
+
+2) Flexibility
+   - A class can implement multiple interfaces
+
+3) Clean Design
+   - Promotes loose coupling and better maintainability
 */
-

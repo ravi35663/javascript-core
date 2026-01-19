@@ -1,102 +1,93 @@
-/*
-=> Function types and signatures:
-    ->  Function types and signatures in TypeScript define how functions should be 
-        structured, including their parameters and return types.
+/* ===================== FUNCTION TYPES & SIGNATURES (TypeScript) =====================
+=> Function Types:
+    - Define the structure of a function
+    - Specify parameter types and return type
 */
 
-// Basic Function Type
-let greet: (name:string) => void // it is function declaration
-// greet is a function which take 1 parameter and return nothing
-greet  = function(name: string):void{
-    console.log("name is : ",name);
+// Basic function type (declaration)
+let greet: (name: string) => void;
+// greet takes a string and returns nothing
+greet = function (name: string): void {
+    console.log("name is:", name);
+};
+// Function type with return value
+let add: (a: number, b: number) => number;
+add = function (a: number, b: number): number {
+    return a + b;
+};
+
+/* ===================== FUNCTION SIGNATURES ===================== */
+// Function signature via function declaration
+function multiply(a: number, b: number): number {
+    return a * b;
+}
+// Function signature using interface
+interface Calculator {
+    (a: number, b: number): number;
 }
 
-let add: (a:number,b:number) => number; // return number
-add = function(a:number, b:number):number{
-    return a+b;
-}
+let divide: Calculator;
+divide = function (a: number, b: number): number {
+    return a / b;
+};
+
 /*
-    ==> Function Signatures:
+Note:
+- Function types and signatures ensure correct arguments and return values
 */
-//Function Signature Declaration
-function multiply(a:number, b:number): number {
-    return a * b
+/* ===================== OPTIONAL & DEFAULT PARAMETERS ===================== */
+// Optional parameter using '?'
+function greets(name: string, greetings?: string): string {
+    return `${greetings || "Hello"}, ${name}`;
 }
+greets("Ravi");          // Hello, Ravi
+greets("Ravi", "Hey");   // Hey, Ravi
 
-// Interface with Function Signature
-interface Calculator{
-    (a:number,b:number): number;
-}
-
-let divide:Calculator;
-divide = function (a:number,b:number): number {
-    return (a/b);
-}
-/*
-Note: 
-    Function types and signatures help ensure that functions are used with the correct 
-    arguments and return values.
-*/
-/*
-    Optional and Default parameters:
-*/ 
-// Optional Parameters: '?' is used to make parameter as optional 
-function greets(name:string,greetings?:string) : string{
-    return `${greetings || 'Hello'}, ${name}`;
-}
-greets("Ravi");// Hello, Ravi
-greets("Ravi","Hey"); // Hey, Ravi
-
-//Default parameters:
-function greetings(name:string, greeting:string='Hello'): string{
+// Default parameter
+function greetings(name: string, greeting: string = "Hello"): string {
     return `${greeting}, ${name}`;
 }
+greetings("Ravi");        // Hello, Ravi
+greetings("Ravi", "Hey"); // Hey, Ravi
 
-greetings("Ravi") // Hello, Ravi
-greetings("Ravi","Hey") // Hey, Ravi
-  
-
-//You can combine both optional and default parameters:
-function greet2(name:string, greeting:string="Hello" ,punctuation?:string):string{
-    return `${greeting}, ${name}${punctuation || ""}`
+// Combining default + optional parameters
+function greet2(
+    name: string,
+    greeting: string = "Hello",
+    punctuation?: string
+): string {
+    return `${greeting}, ${name}${punctuation || ""}`;
 }
-greet2("Alice"); // Output: Hello, Alice
-greet2("Bob", "Hi", "!"); // Output: Hi, Bob!
+greet2("Alice");            // Hello, Alice
+greet2("Bob", "Hi", "!");   // Hi, Bob!
 
-//Rest parameters with functions
-function numSum(...nums:number[]):number{
-    return nums.reduce((total,item)=>{
-        total+=item
-        return total
-    },0)
+
+/* ===================== REST PARAMETERS ===================== */
+// Rest parameter allows variable number of arguments
+function numSum(...nums: number[]): number {
+    return nums.reduce((total, item) => total + item, 0);
 }
 
-console.log(numSum(1, 2, 3)); // Output: 6
-console.log(numSum(4, 5, 6, 7)); // Output: 22
-
-/*
-==> Function Overload:
-    Function overloads in TypeScript allow a function to have multiple signatures, 
-    enabling it to handle different types or numbers of parameters while still being 
-    type-safe.
+console.log(numSum(1, 2, 3));        // 6
+console.log(numSum(4, 5, 6, 7));     // 22
+/* ===================== FUNCTION OVERLOADING =====================
+    - Multiple function signatures
+    - Single implementation handles all cases
 */
 
-function addItems(a:number,b:number) : number;
-function addItems(a:string,b:string) : string;
+// Overload signatures
+function addItems(a: number, b: number): number;
+function addItems(a: string, b: string): string;
 
-function addItems(a:any,b:any):any{
-    return a+b;
+// Implementation
+function addItems(a: any, b: any): any {
+    return a + b;
 }
 
-let result1 = addItems(5, 10);// Output: 15 (number)
-let result2 = addItems("Hello, ", "World!"); // Output: "Hello, World!" (string)
-
-/*
-Notes:
-    1)  Multiple Signatures: You define multiple function signatures/return type for 
-        different parameter types or combinations.
-    2)  Implementation: The actual function implementation must be able to handle all 
-        overload cases.
-    3)  Type Safety: The compiler will enforce the correct usage based on the overloads 
-        defined.
+let result1 = addItems(5, 10);                    // 15
+let result2 = addItems("Hello, ", "World!");      // "Hello, World!"
+/* ===================== KEY NOTES =====================
+    1) Overloads define multiple valid signatures
+    2) One implementation handles all overloads
+    3) Compiler enforces type safety at usage time
 */

@@ -1,69 +1,70 @@
-/*
-===> Abstract Classes and Methods in TypeScript:
-    ->  An abstract class in TypeScript is a class that cannot be instantiated directly. 
-        It is meant to serve as a base class for other classes, providing common functionality while
-        enforcing a certain structure for derived classes. 
-        
-    ->  Abstract classes can contain both implemented methods and abstract methods 
-        (which must be implemented by derived classes).
-*/
-/*
-===> Abstract Methods:
-    ->  These are methods declared inside an abstract class without any implementation.
-    ->  Derived classes must provide the implementation for these abstract methods.
-    ->  Abstract methods are like a contract that any subclass must follow.
+/* ===================== ABSTRACT CLASSES & METHODS (TypeScript) =====================
+=> Abstract Class:
+    - Cannot be instantiated directly
+    - Used as a base class
+    - Can contain:
+    → Abstract methods (no implementation)
+    → Concrete methods (with implementation)
+    - Enforces a structure for derived classes
+
+
+=> Abstract Method:
+    - Declared without implementation
+    - Must be implemented by child classes
+    - Acts like a contract for subclasses
 */
 
+/* ===================== BASIC EXAMPLE ===================== */
 export abstract class Animal {
-    abstract sound(): void // Abstract method without implementation
+    // Abstract method (no implementation)
+    abstract sound(): void;
 
-    // Concrete method: implemented in the abstract class
-    move():void{
-        console.log("I can move")
+    // Concrete method (implemented)
+    move(): void {
+        console.log("I can move");
     }
 }
 
-export class Dog extends Animal{
-
-    // must provide implementation for the abstract method
-    sound():void{
+export class Dog extends Animal {
+    // Mandatory implementation of abstract method
+    sound(): void {
         console.log("Bark");
     }
 }
-  
 
 const myDog = new Dog();
 myDog.sound(); // Bark
-myDog.move // I can move
+myDog.move();  // I can move
 
-/*
-===> Key Points:
-    Abstract Class :-
-        ->  Cannot be instantiated.
-        ->  Can have both abstract (without implementation) and non-abstract (implemented) methods.
-    
-    Abstract Method :-
-        ->  Declared without implementation in the abstract class.
-        ->  Must be implemented by any class that extends the abstract class.
 
-    Concrete Methods in Abstract Class :-
-        ->  Can be implemented normally in the abstract class and inherited by subclasses.
+/* ===================== KEY POINTS =====================
+Abstract Class:
+    - Cannot create object directly
+    - Can have abstract + concrete methods
+
+Abstract Method:
+    - No body in abstract class
+    - Must be implemented by subclasses
+
+Concrete Method:
+    - Fully implemented in abstract class
+    - Inherited by child classes
 */
 
-/*  Example with Multiple Abstract Methods: */
-abstract class Vehicle{
+/* ===================== MULTIPLE ABSTRACT METHODS EXAMPLE ===================== */
+abstract class Vehicle {
     abstract startEngine(): void;
     abstract stopEngine(): void;
 
     // Concrete method
-    fuelType(): string{
-        return 'Diesel'
+    fuelType(): string {
+        return "Diesel";
     }
 }
 
-class Car extends Vehicle{
+class Car extends Vehicle {
     startEngine(): void {
-        console.log("Car engine started")
+        console.log("Car engine started");
     }
 
     stopEngine(): void {
@@ -73,14 +74,12 @@ class Car extends Vehicle{
 
 const car = new Car();
 console.log(car.fuelType()); // Diesel
-car.startEngine() // Car engine started
-car.stopEngine() // Car engine stopped
+car.startEngine();           // Car engine started
+car.stopEngine();            // Car engine stopped
 
-
-/*
-===> Key Benefits:
-    ->  Abstract classes provide a structured way to define a base class with certain methods that must 
-        be implemented by subclasses.
-    ->  You can include some shared functionality directly in the abstract class (like the move() 
-        method in the Animal class).
+/* ===================== KEY BENEFITS =====================
+    - Defines a clear base structure
+    - Forces consistent implementation
+    - Allows shared functionality
+    - Improves maintainability and scalability
 */

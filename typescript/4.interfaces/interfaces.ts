@@ -1,64 +1,74 @@
-/*
-==> Interface:
-   ->   An interface in TypeScript defines the structure of an object, enforcing type safety 
-        by specifying properties and methods that an object or class must have. It doesn't 
-        provide any implementation.
+/* ===================== INTERFACES (TypeScript) =====================
+=> Interface:
+        - Defines the structure of an object
+        - Enforces type safety
+        - Contains only property and method declarations
+        - Does NOT provide implementation
 */
-interface Animal{
-        name: string;
-        makeSound(): void;
-        bread?:string // optional
+
+interface Animal {
+    name: string;
+    makeSound(): void;
+    breed?: string; // Optional property
 }
 
-class Dog implements Animal{
-        name:string;
-        constructor(name:string){
-                this.name = name;
-        }
-        makeSound(): void {
-                console.log("Bark");
-        }
+// Class implementing the interface
+class Dog implements Animal {
+    name: string;
+    constructor(name: string) {
+        this.name = name;
+    }
+    // Mandatory implementation
+    makeSound(): void {
+        console.log("Bark");
+    }
 }
-const dog_name:string = 'scooby'
-const dog = new Dog(dog_name);
-dog.makeSound();
 
-/*
-Note:
-1) Polymorphism: Interfaces allow different classes to implement the same interface but 
-   behave differently.
-2) Extending interfaces: You can extend an interface from another, allowing for flexible 
-   design.
+const dogName: string = "scooby";
+const dog = new Dog(dogName);
+dog.makeSound(); // Bark
+
+/* ===================== IMPORTANT NOTES =====================
+1) Polymorphism
+   - Different classes can implement the same interface
+   - Each class can have different behavior
+
+2) Interface Extension
+   - Interfaces can extend other interfaces
+   - Promotes flexible and reusable design
 */
-/*
-==> Interface extension
-*/
-interface Mammal extends Animal{
-        // This mammal will have all properties of Animal
-        furColor: string 
+
+/* ===================== INTERFACE EXTENSION ===================== */
+// Extending Animal interface
+interface Mammal extends Animal {
+    // Inherits all Animal properties
+    furColor: string;
 }
 
-interface Person{
-        name: string;
-        age:number
+// Base interface
+interface Person {
+    name: string;
+    age: number;
 }
 
-interface Employee extends Person{
-        employeeId:string;
-        position:string
+// Extended interface
+interface Employee extends Person {
+    employeeId: string;
+    position: string;
 }
 
 const employee: Employee = {
-        name:"Ravi",
-        age:27,
-        employeeId:'1234567',
-        position:"SDE"
-}
+    name: "Ravi",
+    age: 27,
+    employeeId: "1234567",
+    position: "SDE",
+};
+
 /*
 Note:
--> We can extends multiple interfaces all together
+    -   Interfaces can extend multiple interfaces
 */
-
-interface Manager extends Employee,Person{
-        department:string
+// Multiple interface extension
+interface Manager extends Employee, Person {
+    department: string;
 }
