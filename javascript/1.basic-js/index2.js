@@ -147,3 +147,24 @@ Note:
     ->  Deleting a function is not allowed 
     ->  Duplicating a parameter is not allowed.
 */
+// ======================= ENCODE & DECODE URL IN JAVASCRIPT =======================
+// 1) Encoding and Decoding URL
+/*
+    - encodeURI() is used to encode a complete URL
+    - It takes a URL string and returns an encoded version
+    - decodeURI() is used to decode an encoded URL back to its original form
+*/
+
+let uri = "employeeDetails?name=john&occupation=manager";
+
+let encodedURI = encodeURI(uri);
+let decodedURI = decodeURI(encodedURI);
+
+console.log({ uri, encodedURI, decodedURI });
+
+// ======================= IMPORTANT NOTE =======================
+/*
+    - encodeURI() does NOT encode reserved characters:
+    / ? : @ & = + $ #
+    - To encode these characters as well, use encodeURIComponent()
+*/
