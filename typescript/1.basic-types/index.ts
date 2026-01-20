@@ -25,7 +25,6 @@
    - Represents absence of return value
    - Mostly used for functions that don’t return anything
 
-
 // ==> Use of 'any'
 let data: any;
 data = 42;
@@ -118,6 +117,7 @@ function add(a: number, b: number) {
 
 // Array inference
 const arr = [1, 2, 3, 4, 5]; // inferred as number[]
+
 /* ===================== TYPE ASSERTIONS (CASTING) =====================
     - Used when TypeScript cannot infer the exact type
     - Tells compiler the specific type
