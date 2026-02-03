@@ -1,0 +1,37 @@
+// Recommended tsconfig.json (Lint-Friendly)
+{
+  // Compiler configuration options
+  "compilerOptions": {
+    // Enables all strict type-checking options
+    // Helps catch bugs early and enforces safer code
+    "strict": true,
+
+    // Disallows variables and parameters with implicit `any` type
+    // Forces you to explicitly define types
+    "noImplicitAny": true,
+
+    // Ensures `null` and `undefined` are handled explicitly
+    // Prevents common runtime null reference errors
+    "strictNullChecks": true,
+
+    // Specifies the JavaScript version that TypeScript outputs
+    // ES2022 supports modern features like top-level await
+    "target": "ES2022",
+
+    // Specifies the module system for generated JavaScript
+    // ESNext keeps modern `import/export` syntax for bundlers
+    "module": "ESNext",
+
+    // Defines how TypeScript resolves modules
+    // Node matches Node.js resolution strategy
+    "moduleResolution": "Node",
+
+    // Skips type checking of declaration files (*.d.ts)
+    // Speeds up compilation and avoids third-party typing issues
+    "skipLibCheck": true
+  },
+
+  // Specifies which files TypeScript should include in compilation
+  // Limits compilation to source code only
+  "include": ["src"]
+}
