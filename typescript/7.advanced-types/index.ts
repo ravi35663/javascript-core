@@ -12,7 +12,7 @@
 /* ===================== ADVANCED TYPES (TypeScript – SHORT & POINT-WISE) ===================== */
 /* 
 => Union Types ( | )
- - Allows a variable to be one of multiple types
+    - Allows a variable to be one of multiple types
 */
 type ID = number | string;
 let userId: ID = 1;
@@ -20,7 +20,7 @@ userId = "abc";
 
 /* 
 => Intersection Types ( & )
- - Combines multiple types into one
+    - Combines multiple types into one
 */
 type Person = { name: string };
 type Employee = { employeeId: string };
@@ -30,14 +30,14 @@ const staff: Staff = { name: "Ravi", employeeId: "E101" };
 
 /* 
 => Literal Types
-- Restricts values to exact literals
+    - Restricts values to exact literals
 */
 type Status = "success" | "error" | "loading";
 let state: Status = "success";
 
 /* 
 => Type Narrowing
-- TypeScript narrows type using checks
+    - TypeScript narrows type using checks
 */
 function printId(id: ID) {
     if (typeof id === "string") {
@@ -48,7 +48,7 @@ function printId(id: ID) {
 }
 /*
 => Type Guards (typeof, in, instanceof)
-- Used to safely narrow types
+    - Used to safely narrow types
 */
 function process(value: string | number) {
     if (typeof value === "string") {
@@ -82,7 +82,7 @@ function useVehicle(v: Car | Bike) {
 }
 /*
 => Discriminated (Tagged) Unions
-- Uses a common literal property to narrow types
+    - Uses a common literal property to narrow types
 */
 type Shape =
     | { kind: "circle"; radius: number }
@@ -96,7 +96,7 @@ function area(shape: Shape) {
 }
 /*
 => Mapped Types
-- Create new types by transforming properties
+    - Create new types by transforming properties
 */
 type ReadonlyUser<T> = {
     readonly [K in keyof T]: T[K];
@@ -107,7 +107,7 @@ const readonlyUser: ReadonlyUser<UserType> = { name: "Ravi", age: 27 };
 
 /*
 => Conditional Types
-- Type depends on a condition
+    - Type depends on a condition
 */
 type IsString<T> = T extends string ? "Yes" : "No";
 type A = IsString<string>; // Yes
@@ -115,17 +115,16 @@ type B = IsString<number>; // No
 
 /*
 => Indexed Access Types
-- Access property types using index
+    - Access property types using index
 */
 type UserProps = {
     name: string;
     age: number;
 };
 type NameType = UserProps["name"]; // string
-
 /* 
 => Utility Types
-- Built-in helpers to transform types
+    - Built-in helpers to transform types
 */
 type PartialUser = Partial<UserType>;      // All properties optional
 type RequiredUser = Required<UserType>;    // All properties required

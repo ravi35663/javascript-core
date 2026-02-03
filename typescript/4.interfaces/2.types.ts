@@ -6,15 +6,15 @@
 
 
 ==> Uses of Type Aliases:
-1) Simplifying Complex Types
-   - Helpful for object types, unions, and combinations
+    1) Simplifying Complex Types
+        - Helpful for object types, unions, and combinations
 
-2) Improving Readability
-   - Meaningful names make code easier to understand
+    2) Improving Readability
+        - Meaningful names make code easier to understand
 
-3) Reusability
-   - Same type can be reused across the application
-   - Promotes DRY principles
+    3) Reusability
+        - Same type can be reused across the application
+        - Promotes DRY principles
 
 
 /* ===================== EXAMPLES ===================== */

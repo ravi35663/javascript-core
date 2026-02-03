@@ -52,7 +52,6 @@ function processData(value: unknown): void {
 }
 processData(unknownData);
 
-
 // never
 function throwError(message: string): never {
     throw new Error(message); // Never returns

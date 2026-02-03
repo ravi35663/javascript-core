@@ -71,21 +71,21 @@ console.log(emp.getSalary()); // ✅ access private via method
 // emp.id = 102 ❌ Error (readonly)
 
 /* ===================== SUMMARY =====================
-Class:
-    - Blueprint for objects
+    Class:
+        - Blueprint for objects
 
     Constructor:
-    - Initializes object properties
+        - Initializes object properties
 
     public:
-    - Accessible everywhere
+        - Accessible everywhere
 
     private:
-    - Accessible only inside the class
+        - Accessible only inside the class
 
     protected:
-    - Accessible in class and subclasses
+        - Accessible in class and subclasses
 
     readonly:
-    - Value cannot be changed after initialization
+        - Value cannot be changed after initialization
 */

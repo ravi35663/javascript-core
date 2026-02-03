@@ -1,9 +1,9 @@
 /* ===================== INTERFACES (TypeScript) =====================
 => Interface:
-        - Defines the structure of an object
-        - Enforces type safety
-        - Contains only property and method declarations
-        - Does NOT provide implementation
+    - Defines the structure of an object
+    - Enforces type safety
+    - Contains only property and method declarations
+    - Does NOT provide implementation
 */
 
 interface Animal {

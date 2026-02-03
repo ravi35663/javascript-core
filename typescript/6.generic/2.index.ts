@@ -1,22 +1,24 @@
 /*
-===> Constraints with Generics in TypeScript:
-    ->  Sometimes, when using generics, you may want to enforce certain constraints on the 
-        type that can be passed. By using constraints, you can ensure that the generic type 
-        adheres to a specific structure or has certain properties.
+=> Constraints with Generics in TypeScript:
+    ->  Sometimes, when using generics, you may want to enforce certain 
+        constraints on the type that can be passed. By using constraints, you 
+        can ensure that the generic type adheres to a specific structure or has 
+        certain properties.
 
-    ->  You can add constraints to generics using the 'extends' keyword. This ensures that 
-        the generic type must extend a certain type or implement certain properties/methods.
+    ->  You can add constraints to generics using the 'extends' keyword. 
+        This ensures that the generic type must extend a certain type or 
+        implement certain properties/methods.
 */ 
 /*
-===> Generic Constraints Example:
-    ->  Let’s create a function that works with an object that must have a length property. 
-        Without a constraint, this function could fail if the type passed doesn’t have a 
-        length property.
+=> Generic Constraints Example:
+    ->  Let’s create a function that works with an object that must have a 
+        length property. Without a constraint, this function could fail if the 
+        type passed doesn’t have a length property.
 */
 
 // A generic function with a constraint using the 'extends' keyword 
 function logLength<T extends {length: number}>(item:T):void{
-    console.log(item.length)
+    console.log(item.length) // throw error if item does not have length property
 }
 // Now this will work, as 'string' and arrays have a length property
 logLength('Hello') // Output: 5
@@ -26,12 +28,12 @@ logLength([1,2,3,4]) // Output: 4
 // logLength(10)
 
 /*
-===> Why Use Constraints?
+=> Why Use Constraints?
     ->  To ensure that the generic type has certain methods or properties.
     ->  To narrow down the types allowed in a generic function or class.
 */
 /*
-===> Using Interfaces as Constraints:
+=> Using Interfaces as Constraints:
     ->  You can also use interfaces to enforce more complex constraints.
 */
 

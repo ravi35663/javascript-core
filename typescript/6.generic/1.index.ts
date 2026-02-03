@@ -1,22 +1,25 @@
 /*
 => Generic types and functions:
-    ->  Generics provide a way to create reusable components that work with a variety of 
-        types rather than a single one. 
-    ->  They allow functions, classes, and interfaces to be flexible while still maintaining 
-        strong type safety.    
+    ->  Generics provide a way to create reusable components that work with a 
+        variety of types rather than a single one. 
+
+    -   Generics are compile-time only.It cannot work with run time.
+
+    ->  They allow functions, classes, interfaces and types to be flexible while 
+        still maintaining strong type safety.    
 */
 /*
 => Benefits of Generics:
-    ->  Reusability: You can reuse the same function or class for different data types.
-    ->  Type Safety: Generics ensure that the types are consistent, catching errors at 
-        compile time.
+    ->  Reusability: You can reuse the same function or class for different 
+        data types.
+    ->  Type Safety: Generics ensure that the types are consistent, catching 
+        errors at compile time.
 */
 /*
 => Generic Functions:
-    ->  A generic function is a function that can work with any data type. You define a 
-        generic type using angle brackets <>.
+    ->  A generic function is a function that can work with any data type. 
+    -   You define a generic type using angle brackets <>.
 */
-
 // Generic function example:
 function identity<T>(value:T):T{
     return value
@@ -27,10 +30,12 @@ const id2 = identity<number>(42);
 console.log("Id1<><><>:",id1);
 console.log("Id2: ",id2) // 42
 
+
 /*
     1)  The function identity<T> uses a generic type T.
-    2)  When the function is called, you can specify the type by using identity<number> or 
-        identity<string>, or you can let TypeScript infer it.
+    2)  When the function is called, you can specify the type by using 
+        identity<number> or identity<string>, or you can let TypeScript infer 
+        it.
 */
 
 // Generic Functions with Multiple Types:

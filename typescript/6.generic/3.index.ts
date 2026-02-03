@@ -1,20 +1,10 @@
 /*
 => Using Multiple Type Parameters in TypeScript:
-    ->  In TypeScript, you can use multiple type parameters in generic functions, classes, 
-        or interfaces to work with more than one type. 
-    ->  This allows you to create reusable and flexible components that can handle multiple 
-        types at once.
-*/
-/*
-==> Why Use Multiple Type Parameters?
-    ->  To handle multiple different types in a generic function, class, or interface.
-    ->  To create more flexible and reusable components that work with various type combinations.
-*/
-/*
-===> Syntax with Multiple Type Parameters:
-    ->  You can define multiple type parameters by separating them with commas inside the angle brackets 
-        <>.
-    -> 
+    ->  In TypeScript, you can use multiple type parameters in generic functions, 
+        classes, or interfaces to work with more than one type. 
+
+    ->  This allows you to create reusable and flexible components that can
+        handle multiple types at once.
 */
 
 //Example: Generic Function with Multiple Type Parameters
@@ -27,7 +17,6 @@ console.log(result1) // ["Ravi",26]
 
 const result2 = pair<number,boolean>(42,true);
 console.log(result2) // [42,true]
-
 
 //Example: Generic Class with Multiple Type Parameters
 class KeyValueStore<K,V>{
@@ -57,7 +46,7 @@ console.log("Pair1 ",pair1) // {first:'height',second:165}
 console.log("Pair2 ",pair2) // {first:true,second:'success}
 
 /*
-===> Multiple Type Parameters with Constraints:
+=> Multiple Type Parameters with Constraints:
     -> You can also apply constraints when working with multiple type parameters.
 */
 
@@ -67,10 +56,13 @@ function displayPerson<T extends {name:string}, U extends {age:number}>(person: 
 displayPerson({name:'Ravi'},{age:26}) // Ravi is 26 years old
 
 /*
-===> Key Takeaways:
-    ->  Multiple type parameters allow for handling multiple types within the same generic function, 
-        class, or interface.
-    ->  They increase flexibility and reusability, making your code more adaptable.
+=> Key Takeaways:
+    ->  Multiple type parameters allow for handling multiple types within the 
+        same generic function, class, or interface.
+
+    ->  They increase flexibility and reusability, making your code more 
+        adaptable.
     ->  Constraints can be applied to each type parameter individually.
-    ->  You can create complex type-safe components by combining multiple generics.
+    ->  You can create complex type-safe components by combining multiple 
+        generics.
 */

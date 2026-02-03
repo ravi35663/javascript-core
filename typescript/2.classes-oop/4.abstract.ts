@@ -3,8 +3,8 @@
     - Cannot be instantiated directly
     - Used as a base class
     - Can contain:
-    → Abstract methods (no implementation)
-    → Concrete methods (with implementation)
+        → Abstract methods (no implementation)
+        → Concrete methods (with implementation)
     - Enforces a structure for derived classes
 
 
