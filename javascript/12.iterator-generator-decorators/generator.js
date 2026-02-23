@@ -32,7 +32,7 @@ function* FibonacciGenerator(){
 
 const fibonacci = FibonacciGenerator();
 let fib_series = [];
-for(let i=0;i<15;i++){
+for(let i=0; i<15; i++){
     fib_series.push(fibonacci.next().value);
 }
 

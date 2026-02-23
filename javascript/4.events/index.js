@@ -142,15 +142,14 @@ document.getElementById("child").addEventListener(
 
 /*
 HTML structure:
-<div id="parent">
-  <button id="child">Click Me</button>
-</div>
+    <div id="parent">
+    <button id="child">Click Me</button>
+    </div>
 
-Output when button is clicked:
-Parent clicked (Capturing)
-Child clicked (Capturing)
+    Output when button is clicked:
+    Parent clicked (Capturing)
+    Child clicked (Capturing)
 */
-
 
 /* ==============================
    Stop Propagation Example
@@ -163,9 +162,8 @@ document.getElementById("child").addEventListener("click", (event) => {
   event.stopPropagation();
   console.log("Child clicked only");
 });
-
 /*
-Output when button is clicked:
-Child clicked only
-(Parent click will not execute)
+    Output when button is clicked:
+    Child clicked only
+    (Parent click will not execute)
 */

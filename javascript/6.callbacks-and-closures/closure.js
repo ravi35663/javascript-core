@@ -71,7 +71,7 @@ function x() {
 }
 x();
 // Output with var:
-// 11 11 11 ... 11 (11 times) because of same referance.
+// 11 11 11 ... 11 (11 times) because of same reference.
 
 // Solution using let
 function x() {
@@ -82,7 +82,7 @@ function x() {
   }
 }
 x();
-// Output with let: different referance is created for each i
+// Output with let: different reference is created for each i
 // 0 1 2 3 4 5 6 7 8 9 10
 
 // Solution using closure with var
@@ -108,7 +108,7 @@ x();
 */
 /*
 Key Notes:
-- Closure is a function bundled with its lexical environment
-- Gives access to outer scope variables
-- Variables created without var/let/const are always global
+  - Closure is a function bundled with its lexical environment
+  - Gives access to outer scope variables
+  - Variables created without var/let/const are always global
 */

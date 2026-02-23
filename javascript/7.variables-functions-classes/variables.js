@@ -33,15 +33,15 @@ console.log("Name after calling myName:", name);
 
 
 /* ===================== PROBLEMS WITH GLOBAL VARIABLES =====================
-- Name conflicts between global & local variables
-- Harder debugging and testing
-- Unexpected side effects
+    - Name conflicts between global & local variables
+    - Harder debugging and testing
+    - Unexpected side effects
 */
 
 
 /* ===================== NaN PROPERTY =====================
-- Global property representing "Not-a-Number"
-- Indicates invalid numeric result
+    - Global property representing "Not-a-Number"
+    - Indicates invalid numeric result
 */
 
 console.log(Math.sqrt(-1));     // NaN
@@ -49,8 +49,8 @@ console.log(parseInt("Hello"));// NaN
 
 
 /* ===================== isFinite =====================
-- Checks if value is a finite, legal number
-- Returns false for NaN, Infinity, -Infinity
+    - Checks if value is a finite, legal number
+    - Returns false for NaN, Infinity, -Infinity
 */
 
 console.log(isFinite(NaN));        // false

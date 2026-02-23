@@ -72,7 +72,7 @@ document.querySelector("#button").addEventListener("click", () => {
 });
 
 /* ===================== CUSTOM ERROR CLASS =====================
-- Create domain-specific errors by extending Error
+    - Create domain-specific errors by extending Error
 */
 class ValidationError extends Error {
     constructor(message) {

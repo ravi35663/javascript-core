@@ -147,6 +147,13 @@ Promise.all       -> Fail fast, runs in parallel
 Promise.allSettled-> Returns all settled promises
 Promise.race      -> First settled promise wins
 Promise.any       -> First resolved promise wins
+
+| Method               | Resolves when              | Rejects when            | Result                            | Failure behavior    |
+| -------------------- | -------------------------- | ----------------------- | --------------------------------- | ------------------- |
+| `Promise.all`        | **All promises resolve**   | **Any promise rejects** | Array of resolved values          |  **Fail-fast**     |
+| `Promise.allSettled` | **All promises settle**    |  Never rejects          | Array of `{status, value/reason}` |  Handles all       |
+| `Promise.race`       | **First promise settles**  | First promise rejects   | Value or error of first settled   |  Fastest wins      |
+| `Promise.any`        | **First promise resolves** | **All promises reject** | Value of first fulfilled          |  Ignore failures |
 */
 
 // ======================= ASYNC / AWAIT =======================

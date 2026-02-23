@@ -1,13 +1,12 @@
 /* ===================== RACE CONDITION IN JAVASCRIPT =====================
-
 Definition:
-- A race condition occurs when multiple asynchronous operations access
-  and modify shared data, and the final result depends on the execution order.
-- Even though JavaScript is single-threaded, async tasks can interleave,
-  causing unpredictable results.
+    -   A race condition occurs when multiple asynchronous operations access
+        and modify shared data, and the final result depends on the execution order.
+
+    -   Even though JavaScript is single-threaded, async tasks can interleave,
+        causing unpredictable results.
 
 ----------------------------------------------------------------------- */
-
 /* ===================== PROBLEM EXAMPLE ===================== */
 let counter = 0;
 
@@ -26,9 +25,9 @@ setTimeout(() => {
 
 /*
 Why this happens:
-- Both calls read counter = 0
-- Both update counter to 1
-- Execution order causes data loss
+    - Both calls read counter = 0
+    - Both update counter to 1
+    - Execution order causes data loss
 */
 
 /* ===================== HOW TO HANDLE RACE CONDITION ===================== */

@@ -1,7 +1,7 @@
 /*
 =>  call, apply and bind
-    - In JavaScript, functions are objects and they have methods like call(), apply(), 
-      and bind().
+    - In JavaScript, functions are objects and they have methods like call(), 
+      apply(), and bind().
 
 =>  These methods are used to:
     - Explicitly set the value of `this`

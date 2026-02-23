@@ -6,9 +6,9 @@
     - Maintains insertion order
     - Iterable in insertion order
     - Can store all data types:
-    -> Primitive
-    -> Objects
-    -> Composite data types
+        -> Primitive
+        -> Objects
+        -> Composite data types
 */
 
 // ======================= SET OPERATIONS =======================

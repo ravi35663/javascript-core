@@ -14,35 +14,7 @@
         });
         var greeting = eval(msg);
         greeting(); // "Hello, Good morning"
-
-=>  Anonymous function:
-    - Function without a name.
-    - Commonly used as variable assignment or callback.
-    - Examples:
-        const myFunction = function () {
-            // do something
-        };
-
-        [1, 2, 3].map(function (element) {
-            // do something
-        });
-
-=>  Anonymous function example:
-        var x = function (a, b) {
-            return a * b;
-        };
-        console.log(x(5, 10)); // 50
-
-=>  Local vs global variable precedence:
-    - Local variables override global variables with same name.
-    - Example:
-        var msg = "Good morning";
-        function greeting() {
-            msg = "Good Evening";
-            console.log(msg);
-        }
-        greeting(); // Good Evening
-
+        
 =>  JavaScript accessors (getters & setters):
     - Introduced in ES5.
     - get → read property
@@ -114,27 +86,7 @@
         obj.subtract = 9;
         console.log(obj.increment);
         console.log(obj.decrement);
-
-=>  Switch-case purpose:
-    - Used for decision making.
-    - Cleaner than if-else in many cases.
-    - Example:
-        switch (choice) {
-        case value1:
-            break;
-        case value2:
-            break;
-        default:
-            // default
-        }
-
-=>  Switch-case conventions:
-    1) Expression must be number or string
-    2) No duplicate case values
-    3) default is optional
-    4) break stops execution
-    5) Missing break causes fall-through
-
+        
 =>  Error object:
     - Built-in object providing error details.
     - Properties: name, message
