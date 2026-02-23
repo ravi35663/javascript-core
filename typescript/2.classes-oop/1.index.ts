@@ -64,11 +64,11 @@ class Manager extends Employee {
     }
 }
 const emp = new Employee("John", 50000, "HR", 101);
-console.log(emp.name);        // ✅ public → accessible
-console.log(emp.getSalary()); // ✅ access private via method
+console.log(emp.name);        //  public → accessible
+console.log(emp.getSalary()); //  access private via method
 
-// emp.salary ❌ Error (private)
-// emp.id = 102 ❌ Error (readonly)
+// emp.salary Error (private)
+// emp.id = 102 Error (readonly)
 
 /* ===================== SUMMARY =====================
     Class:

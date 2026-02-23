@@ -117,7 +117,6 @@ obj.hasOwnProperty("key");
 // Way 3
 if (obj.key !== undefined) {}
 
-
 /* ===================== LOOP THROUGH OBJECT ===================== */
 for (let key in object) {
     if (object.hasOwnProperty(key)) {

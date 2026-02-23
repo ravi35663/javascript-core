@@ -104,7 +104,7 @@ clickFn();
 // Output: Clicked by Ravi
 
 // ===============================
-// call vs apply vs bind (Summary)
+// call vs apply vs bind
 // ===============================
 /*
 Feature        call            apply              bind

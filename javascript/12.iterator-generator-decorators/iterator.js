@@ -16,7 +16,7 @@ function Iterator(arr){
                     done:false
                 }
             }else{
-                return {   value:undefined,done:true}
+                return {   value:undefined, done:true}
             }
         }
     }

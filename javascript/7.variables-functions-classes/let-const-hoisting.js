@@ -74,7 +74,7 @@ function someMethod() {
 
 
 /* ===================== IIFE =====================
-    - Immediatly invoke function Expression
+    - Immediately invoke function Expression
     - Runs immediately
     - Used for data privacy
 */

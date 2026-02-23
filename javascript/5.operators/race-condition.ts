@@ -20,7 +20,7 @@ increment();
 increment();
 
 setTimeout(() => {
-    console.log("Wrong counter value:", counter); // ❌ 1 (expected 2)
+    console.log("Wrong counter value:", counter); // 1 (expected 2)
 }, 0);
 
 /*
@@ -29,10 +29,9 @@ Why this happens:
     - Both update counter to 1
     - Execution order causes data loss
 */
-
 /* ===================== HOW TO HANDLE RACE CONDITION ===================== */
 
-/* ✅ Solution 1: Serialize with await */
+/* Solution 1: Serialize with await */
 let safeCounter = 0;
 
 async function safeIncrement() {

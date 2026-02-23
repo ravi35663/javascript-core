@@ -16,24 +16,24 @@ const obj = {
 
 const name = "Global";
 
-// 1️⃣ Method Call → this = object
+// 1️ Method Call → this = object
 obj.normal();      
 // normal: Object
 
-// 2️⃣ Function Call → this = undefined (strict mode)
+// 2️ Function Call → this = undefined (strict mode)
 const fn = obj.normal;
 fn();              
 // normal: undefined
 
-// 3️⃣ Forced this → call/apply/bind
+// 3️ Forced this → call/apply/bind
 fn.call(obj);      
 // normal: Object
 
-// 4️⃣ Arrow Function → takes this from outer scope (NOT caller)
-obj.arrow();       
+// 4️ Arrow Function → takes this from outer scope (NOT caller)
+obj.arrow();
 // arrow: undefined (or Global in non-strict)
 
-// 5️⃣ Constructor → this = new object
+// 5️ Constructor → this = new object
 function User(name) {
   this.name = name;
 }
@@ -41,7 +41,6 @@ function User(name) {
 const u = new User("Ravi");
 console.log("constructor:", u.name);
 // constructor: Ravi
-
 
 /*
 MENTAL MODEL:

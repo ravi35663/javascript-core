@@ -180,6 +180,6 @@ Note : - Here we can change the value of the object hence it is mutable .
         also the first level of cloning.
     
         #Method - 3:
-        let duplicate_2 = JSON.parse(JSON(stringify(original))); // this is perfect deep cloning.
+        let duplicate_2 = JSON.parse(JSON.stringify(original)); // this is perfect deep cloning.
         Here if we change a duplicate object’s attributes it won’t affect the original object.
 */
